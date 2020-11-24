@@ -1,17 +1,19 @@
-local styles = data.raw["gui-style"]["default"]
-styles.waypoints_switch_padding = {type = "switch_style", parent="switch", top_padding=3}  -- Fixes height of switch to be the same as its labels
-styles.waypoints_empty_filler = {type = "empty_widget_style", horizontally_stretchable="on"}
-
-local menu_simulations = require("__base__/menu-simulations/menu-simulations")
-if not data.raw["utility-constants"]["default"].main_menu_simulations then
-  data.raw["utility-constants"]["default"].main_menu_simulations = {}
-end
+-- Get the menu simulations
 local main_menu_simulations = data.raw["utility-constants"]["default"].main_menu_simulations
 
+-- Remove vanilla menu simulations if the user wants. (on by default - muhuhahaha)
+if settings.startup["hall-of-fame-disable-defaults"].value == true then
+  for k in pairs (main_menu_simulations) do
+    main_menu_simulations [k] = nil
+  end
+end
+
+-- Now add all the Hall of Famers
+local playtime = 60 * 60
 main_menu_simulations.soelless_gaming_beautiful = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/soelless_gaming_beautiful.zip",
-  length = 60 * 60,
+  length = playtime,
   init =
   [[    
     
@@ -81,7 +83,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.kfitik_14kpms = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/kfitik_14kpms.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
     
@@ -151,7 +153,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
     
@@ -221,7 +223,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.accidentalchef_10rpm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/p0ober_jdplays_spaghetti_world.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
     
@@ -291,7 +293,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.accidentalchef_10rpm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/accidentalchef_10rpm.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
     
@@ -361,7 +363,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.swolar_20kspm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/swolar_20kspm.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
 
@@ -431,7 +433,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.horvenbeestinger_2500spm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/horvenbeestinger_2500spm.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
 
@@ -501,7 +503,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.lilyrose_beltmegabase = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/lilyrose_belt_megabase.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
 
@@ -571,7 +573,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 -- main_menu_simulations.davemcw_1rdpm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/davemcw_1rdpm.zip",
---   length = 60 * 60,
+--   length = playtime,
 --   init =
 --   [[    
 
