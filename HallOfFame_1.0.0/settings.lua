@@ -1,5 +1,5 @@
 data:extend({
-    -- {    -- This default value does not work
+    -- {    -- This default value does not work. It's a bug I think.
     --     type = "int-setting",
     --     name = "hall-of-fame-playback-time",           
     --     setting_type = "startup",        
@@ -11,6 +11,6 @@ data:extend({
         type = "bool-setting",
         name = "hall-of-fame-disable-defaults",        
         setting_type = "startup",
-        default_value = true
+        default_value = false
     }
 })

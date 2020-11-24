@@ -2,7 +2,9 @@
 
 Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and inspire even greater builds!
 
-Therefore, if you install this mod then this Hall of Fame will occationally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets.
+Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. If you want to see a sneak of how it looks like in action you can view this [release trailer](https://youtu.be/zERZh224IkI) on YouTube.
+
+ It's also possible to only see Hall of Fame simulations and disabling the default vanilla simulations in the mod settings. However, currently vanilla simulations are shown by default since they are really cool.
 
 ### The Following Bases are currently part of The Hall of Fame
 *In no particular order*
@@ -17,4 +19,8 @@ Therefore, if you install this mod then this Hall of Fame will occationally appe
 - [Kfitik: ≈12 kSPM Vanilla-ish](https://www.reddit.com/r/factorio/comments/jcbsxs/177gw_of_solar/). Built in Factorio 1.0, but ran at 7 UPS.
 
 ### Expanding the Hall of Fame
-The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will added soon. If you have have any suggestions to new additions into the Hall of Fame, please mention it in the discussion.
+The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
+
+
+### Disclaimer
+I did not build any of the bases showcased. I'm simply compiling a list of  memorable bases that other people built which are typically published on Reddit. If you do not like your base being showcased please let me know :)
