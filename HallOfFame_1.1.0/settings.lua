@@ -3,7 +3,7 @@ data:extend({
         type = "int-setting",
         name = "hall-of-fame-playback-time",           
         setting_type = "startup",        
-        default_value = 120,
+        default_value = 600,
         minimum_value = 1,
         maximum_value = 10000
     },

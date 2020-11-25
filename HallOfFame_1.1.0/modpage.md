@@ -26,9 +26,9 @@ Factorio
 
 # Hall of Fame - Menu Simulations
 
-Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and inspire even greater builds!
+Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and inspire even greater builds! 
 
-Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. If you want to see a sneak of how it looks like in action you can view this [release trailer](https://youtu.be/zERZh224IkI) on YouTube.
+Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. It also makes an amazing *screensaver*! If you want to see a sneak of how it looks like in action you can view this [release trailer](https://youtu.be/zERZh224IkI) on YouTube.
 
 You can set how long each base will play in the mod settings, but it starts with a default play time of 2 minutes so that you have time to investigate the beautiful bases. By default vanilla simulations are turned off by default with a mod setting, but it's advised to turn it back on after you enjoyed the Hall of Fame. 
 
@@ -43,6 +43,7 @@ You can set how long each base will play in the mod settings, but it starts with
 - [Horvenbeestinger: Beautiful Light Megabase](https://www.reddit.com/r/factorio/comments/izym9l/turning_on_the_factory_2500spm/). Built in Factorio 1.0. Absolutely beautiful base, especially at night with the new lighting in Factorio 1.1.
 - [Gh0stP1rate and Hamiebarmund: 10k SPM 100% Vanilla Megabase](https://www.reddit.com/r/factorio/comments/jpwydq/10k_spm_100_vanilla_megabase/). Built in Factorio 1.0. One of the biggest true vanilla bases.
 - [Kfitik: ≈12 kSPM Vanilla-ish](https://www.reddit.com/r/factorio/comments/jcbsxs/177gw_of_solar/). Built in Factorio 1.0, but ran at 7 UPS.
+- [Quazarz_: Science River](https://www.reddit.com/r/factorio/comments/bjxai2/science_river_reloaded_an_endgame_scalable_lab/) Built in Factorio 0.18. Beautiful science sushi belt river.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 

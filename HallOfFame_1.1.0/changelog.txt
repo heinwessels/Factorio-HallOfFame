@@ -1,0 +1,13 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 25. 11. 2020
+  Features:
+    - Added Science River by Quazarz_
+
+  Changes:
+    - Change default playback time to 10 minutes for screensavers.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 25. 11. 2020
+  Features:
+    - Initial release.
