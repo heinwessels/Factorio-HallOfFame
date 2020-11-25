@@ -4,7 +4,7 @@ Factorio has a rich history of amazing creations, from highly optimized builds t
 
 Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. If you want to see a sneak of how it looks like in action you can view this [release trailer](https://youtu.be/zERZh224IkI) on YouTube.
 
- It's also possible to only see Hall of Fame simulations and disabling the default vanilla simulations in the mod settings. However, currently vanilla simulations are shown by default since they are really cool.
+You can set how long each base will play in the mod settings, but it starts with a default play time of 2 minutes so that you have time to investigate the beautiful bases. It's also possible to only see Hall of Fame simulations through the mod settings. However, currently vanilla simulations are shown by default since they are really cool.
 
 ### The Following Bases are currently part of The Hall of Fame
 *In no particular order*

@@ -1,7 +1,7 @@
 -- Get the menu simulations
 local main_menu_simulations = data.raw["utility-constants"]["default"].main_menu_simulations
 
--- Remove vanilla menu simulations if the user wants. (on by default - muhuhahaha)
+-- Remove vanilla menu simulations if the user wants
 if settings.startup["hall-of-fame-disable-defaults"].value == true then
   for k in pairs (main_menu_simulations) do
     main_menu_simulations [k] = nil
@@ -9,7 +9,7 @@ if settings.startup["hall-of-fame-disable-defaults"].value == true then
 end
 
 -- Now add all the Hall of Famers
-local playtime = 60 * 60
+local playtime = 60 * settings.startup["hall-of-fame-playback-time"].value
 main_menu_simulations.soelless_gaming_beautiful = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/soelless_gaming_beautiful.zip",
