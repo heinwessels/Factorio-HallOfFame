@@ -4,5 +4,6 @@
 	"title": "Hall of Fame: Menu Simulations",
 	"author": "stringweasel",	
 	"factorio_version": "1.1",
+	"dependencies": ["base >= 1.1.0"],
 	"description": "Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. Bases that belong in a Hall of Fame.\nThis mod will play these memorable megabases in the background in the main menu. "
 }
