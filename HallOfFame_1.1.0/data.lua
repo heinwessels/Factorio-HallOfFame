@@ -11,30 +11,30 @@ end
 -- Now add all the Hall of Famers
 local playtime = 60 * settings.startup["hall-of-fame-playback-time"].value
 
-main_menu_simulations.Quazarz_science_rivier = {
+main_menu_simulations.goose_Burner_inserter_megabase = {
   checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Quazarz_science_rivier.zip",
+  save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
   length = playtime,
   init =
   [[    
     
-    local middle={28, -147.5}
+    local middle= {1515, 1295}
 
     game.camera_position = middle
     game.camera_zoom = 0.30
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 7
+    local text_scale = 5.5
     local header_scale = 0.65 
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 20
+    local rect_width = 26
 
-    local top_left = {77, -180}
+    local top_left = {1562, 1333}
     local scale_name = 2.8
     local text_colour = {204,102,0}        
     local spacing = {0, 0.4*text_scale}
@@ -70,16 +70,86 @@ main_menu_simulations.Quazarz_science_rivier = {
     local current_pos = top_left
     rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, color={200,180,150}, scale=text_scale*header_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
-    rendering.draw_text{text="Quazarz_", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="Goose", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Science River", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="Burner Inserter Megabase", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="Factorio 0.17", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
   ]]
 }
+
+-- main_menu_simulations.Quazarz_science_rivier = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Quazarz_science_rivier.zip",
+--   length = playtime,
+--   init =
+--   [[    
+    
+--     local middle={28, -147.5}
+
+--     game.camera_position = middle
+--     game.camera_zoom = 0.30
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     local text_scale = 7
+--     local header_scale = 0.65 
+
+--     local border_witdh = {0.1*text_scale, 0.1*text_scale}
+--     local rect_pad = {0.3,0}
+--     local rect_num_of_lines = 3.5
+--     local rect_colour = {48,48,48}
+--     local rect_width = 20
+
+--     local top_left = {77, -180}
+--     local scale_name = 2.8
+--     local text_colour = {204,102,0}        
+--     local spacing = {0, 0.4*text_scale}
+
+--     -- Draw outer rectangle
+--     rendering.draw_rectangle{
+--       color={35,35,35},      
+--       filled=true,
+--       left_top = {
+--         top_left[1]-rect_pad[1]-border_witdh[1],
+--         top_left[2]-rect_pad[2]-border_witdh[2]
+--       },
+--       right_bottom = {
+--         top_left[1] + rect_width + rect_pad[1] + border_witdh[1],
+--         top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_witdh[2]
+--       },
+--       surface = game.surfaces.nauvis
+--     }
+
+--     -- Draw inner rectangle
+--     rendering.draw_rectangle{
+--       color={48,48,48},
+--       filled=true,
+--       left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+--       right_bottom = {
+--         top_left[1] + rect_width + rect_pad[1],
+--         top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2]
+--       },
+--       surface = game.surfaces.nauvis
+--     }
+
+--     -- Draw the text
+--     local current_pos = top_left
+--     rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, color={200,180,150}, scale=text_scale*header_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+--     rendering.draw_text{text="Quazarz_", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+--     rendering.draw_text{text="Science River", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+--     rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
 
 -- main_menu_simulations.soelless_gaming_beautiful = {
 --   checkboard = false,
