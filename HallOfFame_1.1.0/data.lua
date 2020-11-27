@@ -8,9 +8,19 @@ if settings.startup["hall-of-fame-disable-defaults"].value == true then
   end
 end
 
--- Now add all the Hall of Famers
+-- Define some constants
 local playtime = 60 * settings.startup["hall-of-fame-playback-time"].value
+local header_scale = 0.65                 -- Relative to text size
+local spacing_factor = 0.4                -- Vertical spacing between text (multiplied by text scale)
+local rect_pad = {0.3, 0}               -- Padding between text and rectangle corner
+local border_factor = {0.1, 0.1}          -- Factor to scale border width by (multiplied by text scale)
 
+local colour_text = {r=204,g=102,b=0}         -- Colour of main text
+local colour_text_hof = {r=200,g=180,b=150}   -- Colour of the Hall of Fame text
+local colour_rect_out = {r=35,g=35,b=35}      -- Colour of the outer rectangle
+local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
+
+-- Add all the simulations
 main_menu_simulations.kos_mmo_202001 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/kos_mmo_202001.zip",
@@ -20,61 +30,60 @@ main_menu_simulations.kos_mmo_202001 = {
     
     local middle= {506, -560}
 
+    local rect_width = 25
+    local top_left = {445, -588}
+    local text_scale = 4    
+    local rect_num_of_lines = 4.5
+
     game.camera_position = middle
     game.camera_zoom = 0.4
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
-
-    local text_scale = 4
-    local header_scale = 0.65 
-
-    local border_witdh = {0.1*text_scale, 0.1*text_scale}
-    local rect_pad = {0.3,0}
-    local rect_num_of_lines = 4.5
-    local rect_colour = {48,48,48}
-    local rect_width = 25
-
-    local top_left = {445, -588}
-    local scale_name = 2.8
-    local text_colour = {204,102,0}        
-    local spacing = {0, 0.4*text_scale}
-
+    
+    local header_scale = ]]..header_scale..[[ 
+    local border_width = {]]..border_factor[1]..[[*text_scale, ]]..border_factor[2]..[[*text_scale}
+    local rect_pad = {]]..rect_pad[1]..[[, ]]..rect_pad[2]..[[}
+        
+    local text_colour = {]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}
+    local spacing = {0, ]]..spacing_factor..[[*text_scale}
+    
     -- Draw outer rectangle
     rendering.draw_rectangle{
-      color={35,35,35},      
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
       filled=true,
       left_top = {
-        top_left[1]-rect_pad[1]-border_witdh[1],
-        top_left[2]-rect_pad[2]-border_witdh[2]
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
       },
       right_bottom = {
-        top_left[1] + rect_width + rect_pad[1] + border_witdh[1],
-        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_witdh[2]
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
       },
       surface = game.surfaces.nauvis
     }
 
     -- Draw inner rectangle
     rendering.draw_rectangle{
-      color={48,48,48},
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
       filled=true,
       left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
       right_bottom = {
         top_left[1] + rect_width + rect_pad[1],
-        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2]
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
       },
       surface = game.surfaces.nauvis
     }
 
     -- Draw the text
     local current_pos = top_left
-    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, color={200,180,150}, scale=text_scale*header_scale}
+    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, 
+        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, scale=text_scale*header_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
     rendering.draw_text{text="KatherineOfSky and Caledorn", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Likely Multiplayer World Record", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Peak 521 Simultaneous Players", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="Peak 521 Concurrent Players", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
