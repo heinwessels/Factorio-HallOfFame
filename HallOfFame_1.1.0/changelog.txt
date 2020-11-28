@@ -9,6 +9,7 @@ Date: 25. 11. 2020
 
   Changes:
     - Change default playback time to 10 minutes for screensavers.
+    - Disabling Vanilla Simulations will no longer remove modded simulations as well.
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 25. 11. 2020
