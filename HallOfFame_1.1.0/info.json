@@ -1,9 +1,0 @@
-{
-	"name": "HallOfFame",
-	"version": "1.1.0",
-	"title": "Hall of Fame: Menu Simulations & Screensaver",
-	"author": "stringweasel",	
-	"factorio_version": "1.1",
-	"dependencies": ["base >= 1.1.0"],
-	"description": "There is a bug in Factorio 1.1.1! See the mod page on how to run this mod.\n\nFactorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. Bases that belong in a Hall of Fame.\n\nThis mod will play these memorable megabases in the background in the main menu. "
-}
