@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.0
+Date: ?. ?. 2020
+  Features:
+    - Added top entries in the One Chunk Factory Challenge
+
+  Changes:
+    - Added dates to entries on mod page.
+
+---------------------------------------------------------------------------------------------------
 Version: 1.1.1
 Date: 30. 11. 2020
   Features:

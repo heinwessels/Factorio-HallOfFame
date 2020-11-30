@@ -40,6 +40,157 @@ local colour_rect_out = {r=35,g=35,b=35}      -- Colour of the outer rectangle
 local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 
 -- Add all the simulations
+
+main_menu_simulations.challenge_32x32 = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/32x32_challenge.zip",
+  length = playtime,
+  init =
+  [[    
+    
+    local middle= {-41.5, -83}
+
+    local rect_width = 13
+    local top_left = {middle[1]-rect_width/2, -64}
+    local text_scale = 2.4
+    local rect_num_of_lines = 3.5
+
+    game.camera_position = middle
+    game.camera_zoom = 0.65
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+    
+    local header_scale = ]]..header_scale..[[ 
+    local border_width = {]]..border_factor[1]..[[*text_scale, ]]..border_factor[2]..[[*text_scale}
+    local rect_pad = {]]..rect_pad[1]..[[, ]]..rect_pad[2]..[[}
+        
+    local text_colour = {]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}
+    local spacing = {0, ]]..spacing_factor..[[*text_scale}
+    
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw the main text
+    local current_pos = top_left
+    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, 
+        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="One Chunk Factory Challenge", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="All sciences within 32x32 tiles", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="Factorio 0.17", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+
+    -- Left guy
+    --------------------------------------------
+    local rect_width = 6
+    top_left = {middle[1] - 27 - rect_width/2, -63.5}    
+    local rect_num_of_lines = 2.5
+
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+    local current_pos = top_left
+    rendering.draw_text{text="1st", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="acmemyst", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="9.2 SPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    --------------------------------------------
+
+    -- Right guy
+    --------------------------------------------    
+    top_left = {middle[1] + 27 - rect_width/2, -63.5}    
+    local rect_num_of_lines = 2.5
+
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+    local current_pos = top_left
+    rendering.draw_text{text="2nd", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="ostertoasterii", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="8.7 SPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    --------------------------------------------
+
+
+  ]],
+  update =
+  [[
+  ]]
+}
+
+
 main_menu_simulations.kos_mmo_202001 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/kos_mmo_202001.zip",
