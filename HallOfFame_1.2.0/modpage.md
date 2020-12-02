@@ -23,6 +23,7 @@ You can set how long each base will play in the mod settings, but it starts with
 - [KatherineOfSky and Caledorn: Multiplayer World Record 500+](https://youtu.be/c2M7xhE6wKo). [*25 January 2020 using Factorio 0.18*]. This map broke the world record for the most concurrent players on one map, and is likely still holding t. At it's peak they reached 521 concurrent players, and had 924 unique players join.
 - [One Chunk Factory Challenge](https://www.reddit.com/r/factorio/comments/e8c9ra/32x32_one_chunk_factory_challenge_tracker/). [*Nov/Dec 2019 using Factorio 0.17*]. Showcased: first place by [acmemyst](https://www.reddit.com/r/factorio/comments/e5ofty/32x32_challenge_new_record_92_spm/) with 9.2 SPM, and second place by [ostertoasterii
 ](https://www.reddit.com/r/factorio/comments/e1s7jl/32x32_factory_87_spm/) with 8.7 SPM.
+- [Xterminator: Send Supporters to Space](https://www.youtube.com/watch?v=yMcoYkR_qAQ&ab_channel=Xterminator). [*12 September 2017 using Factorio 0.16*] A highly optimized 4 kspm (version equivalent) megabase where he sent his supporters to space in rockets.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
