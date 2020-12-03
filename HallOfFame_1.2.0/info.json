@@ -5,5 +5,5 @@
 	"author": "stringweasel",	
 	"factorio_version": "1.1",
 	"dependencies": ["base >= 1.1.3"],
-	"description": "Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. Bases that belong in a Hall of Fame.\n\nThis mod will play these memorable megabases in the background in the main menu. These are all beautiful pieces of art, and makes for an amazing screensaver."
+	"description": "Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. Bases that belong in a Hall of Fame.\n\nThis mod will play these memorable megabases in the background in the main menu. These are all beautiful pieces of art, and makes for an amazing screensaver.\n\nFor more information about these bases check out the mod page!"
 }

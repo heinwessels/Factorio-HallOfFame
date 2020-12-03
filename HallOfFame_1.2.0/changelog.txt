@@ -3,9 +3,12 @@ Version: 1.2.0
 Date: ?. ?. 2020
   Features:
     - Added top entries in the One Chunk Factory Challenge
+    - Added Send Supporters to Space by Xterminator
+    - Added SteveTrov's Go Big or Go Home 15 RPM base.
 
   Changes:
     - Added dates to entries on mod page.
+    - Attempt at optimizing Lily Rose save.
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
