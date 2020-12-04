@@ -41,6 +41,75 @@ local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 
 -- Add all the simulations
 
+main_menu_simulations.t1024_diag = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/t1024_diag.zip",
+  length = playtime,
+  init =
+  [[    
+    
+    local middle= {-135, -6}
+
+    local rect_width = 11
+    local top_left = {-162, 15}
+    local text_scale = 3.8
+    local rect_num_of_lines = 3.5
+
+    game.camera_position = middle
+    game.camera_zoom = 0.45
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 0.5
+    
+    local header_scale = ]]..header_scale..[[ 
+    local border_width = {]]..border_factor[1]..[[*text_scale, ]]..border_factor[2]..[[*text_scale}
+    local rect_pad = {]]..rect_pad[1]..[[, ]]..rect_pad[2]..[[}
+        
+    local text_colour = {]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}
+    local spacing = {0, ]]..spacing_factor..[[*text_scale}
+    
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw the text
+    local current_pos = top_left
+    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, 
+        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="T-1024", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="Diagonal Base", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="31 March 2018", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+  ]],
+  update =
+  [[
+  ]]
+}
+
 main_menu_simulations.stevetrov_15rpm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/stevetrov_15rpm.zip",
@@ -50,7 +119,7 @@ main_menu_simulations.stevetrov_15rpm = {
     
     local middle= {1636, 1405}
 
-    local rect_width = 16
+    local rect_width = 12
     local top_left = {1567, 1389.5}
     local text_scale = 4.5
     local rect_num_of_lines = 3.5
@@ -101,9 +170,9 @@ main_menu_simulations.stevetrov_15rpm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
     rendering.draw_text{text="SteveTrov", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="15 RPM Vanilla-ish", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="15 RPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.14", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="13 April 2017", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -172,7 +241,7 @@ main_menu_simulations.xterminator_ssts = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Send Supporters to Space", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.17", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="12 September 2017", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -240,7 +309,7 @@ main_menu_simulations.challenge_32x32 = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="All sciences within 32x32 tiles", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.17", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="December 2019", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
 
     -- Left guy
     --------------------------------------------
@@ -393,7 +462,7 @@ main_menu_simulations.kos_mmo_202001 = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Peak 521 Concurrent Players", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.18 - 25/01/2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="25 January 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -463,7 +532,7 @@ main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="BadBagel Spaghetti", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 1.0", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="30 October 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -554,16 +623,16 @@ main_menu_simulations.Quazarz_science_rivier = {
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 7
+    local text_scale = 6
     local header_scale = 0.65 
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 20
+    local rect_width = 18
 
-    local top_left = {77, -180}
+    local top_left = {79, -180}
     local scale_name = 2.8
     local text_colour = {204,102,0}        
     local spacing = {0, 0.4*text_scale}
@@ -603,7 +672,7 @@ main_menu_simulations.Quazarz_science_rivier = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Science River", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="1 May 2019", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -673,7 +742,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Beautiful Megabase", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.15", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="31 October 2017", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -701,7 +770,7 @@ main_menu_simulations.kfitik_14kpms = {
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 11
+    local rect_width = 9
 
     local top_left = {middle[1]-rect_width/2, 1307}
     local scale_name = 2.8
@@ -741,9 +810,9 @@ main_menu_simulations.kfitik_14kpms = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
     rendering.draw_text{text="Kfitik", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="14 kSPM Vanilla-ish", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="14 kSPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 1.0", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="16 October 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -813,7 +882,7 @@ main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="10 kSPM Vanilla", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 1.0", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="7 November 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -883,7 +952,7 @@ main_menu_simulations.p0ober_jdplays_spaghetti_world = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Spaghetti Base", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="9 May 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -951,9 +1020,9 @@ main_menu_simulations.accidentalchef_10rpm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
     rendering.draw_text{text="AccidentalChef", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="10 RPM Vanilla-ish", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="10 RPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.14", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="18 January 2017", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -974,14 +1043,14 @@ main_menu_simulations.swolar_20kspm = {
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 5
+    local text_scale = 4.5
     local header_scale = 0.65   
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 19
+    local rect_width = 15
 
     local scale_name = 2.8
     local text_colour = {204,102,0}    
@@ -1023,7 +1092,7 @@ main_menu_simulations.swolar_20kspm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="20 kSPM 60 UPS", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.18", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="6 May 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -1044,14 +1113,14 @@ main_menu_simulations.horvenbeestinger_2500spm = {
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
-    local text_scale = 7
+    local text_scale = 6
     local header_scale = 0.65  
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 30
+    local rect_width = 24
 
     local scale_name = 2.8
     local text_colour = {204,102,0}    
@@ -1093,7 +1162,7 @@ main_menu_simulations.horvenbeestinger_2500spm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Beautiful Megabase", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 1.0", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="26 September 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -1114,14 +1183,14 @@ main_menu_simulations.lilyrose_beltmegabase = {
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 7
+    local text_scale = 5
     local header_scale = 0.65
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 19
+    local rect_width = 15
 
     local scale_name = 2.8
     local text_colour = {204,102,0}    
@@ -1163,7 +1232,7 @@ main_menu_simulations.lilyrose_beltmegabase = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="Belt Megabase", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.16", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="17 April 2018", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[
@@ -1183,14 +1252,14 @@ main_menu_simulations.davemcw_1rdpm = {
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 3.2
+    local text_scale = 3
     local header_scale = 0.65
 
     local border_witdh = {0.1*text_scale, 0.1*text_scale}
     local rect_pad = {0.3,0}
     local rect_num_of_lines = 3.5
     local rect_colour = {48,48,48}
-    local rect_width = 8
+    local rect_width = 7
 
     local scale_name = 2.8
     local text_colour = {204,102,0}    
@@ -1232,7 +1301,7 @@ main_menu_simulations.davemcw_1rdpm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="1 RDPH", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="Factorio 0.11", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    rendering.draw_text{text="29 June 2015", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],
   update =
   [[

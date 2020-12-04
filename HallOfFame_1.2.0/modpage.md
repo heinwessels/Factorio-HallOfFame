@@ -25,10 +25,10 @@ You can set how long each base will play in the mod settings, but it starts with
 ](https://www.reddit.com/r/factorio/comments/e1s7jl/32x32_factory_87_spm/) with 8.7 SPM.
 - [Xterminator: Send Supporters to Space](https://www.youtube.com/watch?v=yMcoYkR_qAQ&ab_channel=Xterminator). [*12 September 2017 using Factorio 0.16*] A highly optimized 4 kspm (version equivalent) megabase where he sent his supporters to space in rockets. (Thanks Xterminator for the save!)
 - [SteveTrov: Go Big or Go Home 15 RPM](https://www.reddit.com/r/factorio/comments/655440/go_big_or_go_home_15_rpm_modular_gigabase/). [*13 April 2017 using Factorio 0.14*]. Likely the fastest vanilla-ish base at the time.
+- [T-1024: Diagonal Madness](https://forums.factorio.com/viewtopic.php?f=204&t=59237). [*31 March 2018 using Factorio 0.16*] A base where everything is built diagonal.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
 
-
 ### Disclaimers
-I did not build any of the bases showcased. I'm simply compiling a list of  memorable bases that other people built which are typically published on Reddit. If you do not like your base being showcased please let me know :)
+I did not build any of the bases showcased. I'm simply compiling a list of  memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know :)

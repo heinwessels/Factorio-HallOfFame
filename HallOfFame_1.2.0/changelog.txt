@@ -1,14 +1,17 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
-Date: ?. ?. 2020
+Date: 4. 12. 2020
   Features:
     - Added top entries in the One Chunk Factory Challenge
     - Added Send Supporters to Space by Xterminator
     - Added SteveTrov's Go Big or Go Home 15 RPM base.
+    - Added T-1024's Diagonal Madness base.
 
   Changes:
     - Added dates to entries on mod page.
+    - Changed to show dates instead of Factorio versions.
     - Attempt at optimizing Lily Rose save.
+    - Fixed AccidentalChef save after previous update.
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.1
