@@ -5,6 +5,9 @@ Date: ?. ?. 2020
     - Added GreyGoo by NiftyManiac.
     - Added Ant Farm by Griswold.
 
+  Changes:
+    - Optimized Gh0stP1rate's Vanilla Megabase.
+
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 4. 12. 2020
