@@ -3,6 +3,7 @@ Version: 1.3.0
 Date: ?. ?. 2020
   Features:
     - Added GreyGoo by NiftyManiac.
+    - Added Ant Farm by Griswold.
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.2.0
