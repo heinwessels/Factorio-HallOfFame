@@ -8,7 +8,7 @@ You can set how long each base will play in the mod settings, but it starts with
 
 ### The Following Bases are currently part of The Hall of Fame
 *In no particular order*
-- [DaveMcW: 1 Rocket Defense Per Minute](https://www.reddit.com/r/factorio/comments/3biwcf/one_minute_rocket_defense/). [*29 June 2015 using Factorio 0.11*]. I wrote an in-depth [article](https://alt-f4.blog/ALTF4-13) about how this base works and the incredibly well it is built. Note: the ratios are slightly off because of changes in recipes since then.
+- [DaveMcW: 1 Rocket Defense Per Minute](https://www.reddit.com/r/factorio/comments/3biwcf/one_minute_rocket_defense/). [*29 June 2015 using Factorio 0.11*]. I wrote an in-depth [article](https://alt-f4.blog/ALTF4-13) about how this base works and incredibly well it is built. Note: the ratios are slightly off because of changes in recipes since Factorio 0.11.
 - [Lily Rose: Beautiful Belt Megabase](https://forums.factorio.com/viewtopic.php?t=59716). [*19 May 2018 using Factorio 0.15*].
 - [Accidental Chef: 10 Rockets Per Minute](https://www.reddit.com/r/factorio/comments/5osdaa/my_first_gigafactory_10_rockets_per_minute/). [*18 January 2017 using Factorio 0.14*]. Likely the of the biggest vanilla-ish megabase of the time.
 - [Swolar: 20kSPM 60 UPS](https://www.reddit.com/r/factorio/comments/gely3v/20000_science_per_minute_hybrid_modular_megabase/). [*6 May 2020 using Factorio 0.18*]. Shown is only one of 107 identical, fully contained, modules. Most likely the highest science per minute while maintaining the highest UPS megabase ever built. Built using commands.
@@ -27,7 +27,8 @@ You can set how long each base will play in the mod settings, but it starts with
 - [SteveTrov: Go Big or Go Home 15 RPM](https://www.reddit.com/r/factorio/comments/655440/go_big_or_go_home_15_rpm_modular_gigabase/). [*13 April 2017 using Factorio 0.14*]. Likely the fastest vanilla-ish base at the time.
 - [T-1024: Diagonal Madness](https://forums.factorio.com/viewtopic.php?f=204&t=59237). [*31 March 2018 using Factorio 0.16*] A base where everything is built diagonal.
 - [NiftyManiac: GreyGoo Mk1](https://forums.factorio.com/viewtopic.php?f=204&t=41377). [*16 February 2017 using Factorio 0.14*] Using complex circuitry, in combination with [Recursive Blueprints](https://mods.factorio.com/mod/recursive-blueprints) and a modified [Logistic Train Network](https://mods.factorio.com/mods/Optera/LogisticTrainNetwork), this factory expanded autonomously.
-- [Griswold: Ant Farm](https://www.reddit.com/r/factorio/comments/76qzz8/1_rpm_antfarm_factory/). [*16 Octobor 2017 using Factorio 0.15*] A buzzing factory that achieved 1 RPM using only small trains and no bots. 
+- [Griswold: Ant Farm](https://www.reddit.com/r/factorio/comments/76qzz8/1_rpm_antfarm_factory/). [*16 Octobor 2017 using Factorio 0.15*] A buzzing factory that achieved 1 RPM using only small trains and no bots.
+- [Ellipticality: Logistic Distribution Center](https://www.reddit.com/r/factorio/comments/j8qrqa/at_the_heart_of_my_vanilla_base_is_a_logistic/)[*10 Octobor 2020 using Factorio 1.0*] A beautiful distribution center for items and fluids that automatically supply and request items to and from modules using circuits. Achieves 1 kspm.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
