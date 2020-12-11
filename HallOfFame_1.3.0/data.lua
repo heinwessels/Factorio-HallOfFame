@@ -41,6 +41,76 @@ local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 
 -- Add all the simulations
 
+
+main_menu_simulations.Ellipticality_logistic_distribution = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/Ellipticality_logistic_distribution.zip",
+  length = playtime,
+  init =
+  [[    
+    
+    local middle= {-184, -58224}    
+
+    local rect_width = 23
+    local top_left = {-130, -58204}
+    local text_scale = 4.6
+    local rect_num_of_lines = 3.5
+
+    game.camera_position = middle
+    game.camera_zoom = 0.35
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+    
+    local header_scale = ]]..header_scale..[[ 
+    local border_width = {]]..border_factor[1]..[[*text_scale, ]]..border_factor[2]..[[*text_scale}
+    local rect_pad = {]]..rect_pad[1]..[[, ]]..rect_pad[2]..[[}
+        
+    local text_colour = {]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}
+    local spacing = {0, ]]..spacing_factor..[[*text_scale}
+    
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw the text
+    local current_pos = top_left
+    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, 
+        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="Ellipticality", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="Logistic Distribution Center", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="10 October 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+  ]],
+  update =
+  [[
+  ]]
+}
+
 -- main_menu_simulations.griswold_ant_farm = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/griswold_ant_farm.zip",
@@ -110,7 +180,7 @@ local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 --   ]]
 -- }
 
--- mulations.niftymaniac_greygoo1 = {
+-- main_menu_simulations.niftymaniac_greygoo1 = {
 --   checkboard = false,
 --   save = "__HallOfFame__/menu-simulations/niftymaniac_greygoo1.zip",
 --   length = playtime,
@@ -959,75 +1029,75 @@ local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 --   ]]
 -- }
 
-main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
-  length = playtime,
-  init =
-  [[    
+-- main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
+--   length = playtime,
+--   init =
+--   [[    
     
-    local middle={1029, 712}
+--     local middle={1029, 712}
 
-    game.camera_position = middle
-    game.camera_zoom = 0.3
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
+--     game.camera_position = middle
+--     game.camera_zoom = 0.3
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
 
-    local text_scale = 6
-    local header_scale = 0.65 
+--     local text_scale = 6
+--     local header_scale = 0.65 
 
-    local border_witdh = {0.1*text_scale, 0.1*text_scale}
-    local rect_pad = {0.3,0}
-    local rect_num_of_lines = 3.5
-    local rect_colour = {48,48,48}
-    local rect_width = 35
+--     local border_witdh = {0.1*text_scale, 0.1*text_scale}
+--     local rect_pad = {0.3,0}
+--     local rect_num_of_lines = 3.5
+--     local rect_colour = {48,48,48}
+--     local rect_width = 35
 
-    local top_left = {950, 670} --{middle[1]-rect_width/2, 750}
-    local scale_name = 2.8
-    local text_colour = {204,102,0}        
-    local spacing = {0, 0.35*text_scale}
+--     local top_left = {950, 670} --{middle[1]-rect_width/2, 750}
+--     local scale_name = 2.8
+--     local text_colour = {204,102,0}        
+--     local spacing = {0, 0.35*text_scale}
 
-    -- Draw outer rectangle
-    rendering.draw_rectangle{
-      color={35,35,35},      
-      filled=true,
-      left_top = {
-        top_left[1]-rect_pad[1]-border_witdh[1],
-        top_left[2]-rect_pad[2]-border_witdh[2]
-      },
-      right_bottom = {
-        top_left[1] + rect_width + rect_pad[1] + border_witdh[1],
-        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_witdh[2]
-      },
-      surface = game.surfaces.nauvis
-    }
+--     -- Draw outer rectangle
+--     rendering.draw_rectangle{
+--       color={35,35,35},      
+--       filled=true,
+--       left_top = {
+--         top_left[1]-rect_pad[1]-border_witdh[1],
+--         top_left[2]-rect_pad[2]-border_witdh[2]
+--       },
+--       right_bottom = {
+--         top_left[1] + rect_width + rect_pad[1] + border_witdh[1],
+--         top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_witdh[2]
+--       },
+--       surface = game.surfaces.nauvis
+--     }
 
-    -- Draw inner rectangle
-    rendering.draw_rectangle{
-      color={48,48,48},
-      filled=true,
-      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
-      right_bottom = {
-        top_left[1] + rect_width + rect_pad[1],
-        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2]
-      },
-      surface = game.surfaces.nauvis
-    }
+--     -- Draw inner rectangle
+--     rendering.draw_rectangle{
+--       color={48,48,48},
+--       filled=true,
+--       left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+--       right_bottom = {
+--         top_left[1] + rect_width + rect_pad[1],
+--         top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2]
+--       },
+--       surface = game.surfaces.nauvis
+--     }
 
-    -- Draw the text
-    local current_pos = top_left
-    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, color={200,180,150}, scale=text_scale*header_scale}
-    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
-    rendering.draw_text{text="Gh0stP1rate and Hamiebarmund", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
-    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="10 kSPM Vanilla", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
-    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="7 November 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
-  ]],
-  update =
-  [[
-  ]]
-}
+--     -- Draw the text
+--     local current_pos = top_left
+--     rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, color={200,180,150}, scale=text_scale*header_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+--     rendering.draw_text{text="Gh0stP1rate and Hamiebarmund", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+--     rendering.draw_text{text="10 kSPM Vanilla", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+--     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+--     rendering.draw_text{text="7 November 2020", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
 
 -- main_menu_simulations.p0ober_jdplays_spaghetti_world = {
 --   checkboard = false,
