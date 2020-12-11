@@ -4,7 +4,6 @@ Date: ?. ?. 2020
   Features:
     - Added GreyGoo by NiftyManiac.
     - Added Ant Farm by Griswold.
-    - Added Train/Bot Distribution Center by Ellipticality
 
   Changes:
     - Optimized Gh0stP1rate's Vanilla Megabase.
