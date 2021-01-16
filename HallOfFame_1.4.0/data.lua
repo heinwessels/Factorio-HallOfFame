@@ -40,6 +40,74 @@ local colour_rect_out = {r=35,g=35,b=35}      -- Colour of the outer rectangle
 local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
 
 -- Add all the simulations
+main_menu_simulations.zisteau_meosis = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/zisteau_meiosis.zip",
+  length = playtime,
+  init =
+  [[    
+    
+    local middle= {-765, 6}    
+
+    local rect_width = 15
+    local top_left = {-837, 29}
+    local text_scale = 6
+    local rect_num_of_lines = 3.5
+
+    game.camera_position = middle
+    game.camera_zoom = 0.3
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+    
+    local header_scale = ]]..header_scale..[[ 
+    local border_width = {]]..border_factor[1]..[[*text_scale, ]]..border_factor[2]..[[*text_scale}
+    local rect_pad = {]]..rect_pad[1]..[[, ]]..rect_pad[2]..[[}
+        
+    local text_colour = {]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}
+    local spacing = {0, ]]..spacing_factor..[[*text_scale}
+    
+    -- Draw outer rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
+      filled=true,
+      left_top = {
+        top_left[1]-rect_pad[1]-border_width[1],
+        top_left[2]-rect_pad[2]-border_width[2]
+      },
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1] + border_width[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines+header_scale)*spacing[2] + border_width[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw inner rectangle
+    rendering.draw_rectangle{
+      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
+      filled=true,
+      left_top = {top_left[1]-rect_pad[1],top_left[2]-rect_pad[2]},
+      right_bottom = {
+        top_left[1] + rect_width + rect_pad[1],
+        top_left[2] + rect_pad[2] + (rect_num_of_lines + header_scale) * spacing[2]
+      },
+      surface = game.surfaces.nauvis
+    }
+
+    -- Draw the text
+    local current_pos = top_left
+    rendering.draw_text{text="Hall of Fame", surface=game.surfaces.nauvis, target=current_pos, 
+        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, scale=text_scale*header_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
+    rendering.draw_text{text="Zisteau", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="Meiosis", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
+    rendering.draw_text{text="8 May 2017", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
+  ]],
+  update =
+  [[
+  ]]
+}
 
 
 main_menu_simulations.Ellipticality_logistic_distribution = {
