@@ -49,7 +49,7 @@ main_menu_simulations.mangledpork_towns = {
   init =
   [[    
         
-    local middle= {-170, 488}
+    local middle= {-174, 489}
 
     local rect_width = 12
     local top_left = {-144, 506}
