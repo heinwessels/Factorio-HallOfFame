@@ -4,8 +4,6 @@ Factorio has a rich history of amazing creations, from highly optimized builds t
 
 Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. They will run almost indefinitely, which also makes for an amazing *screensaver*!
 
-You can set how long each base will play in the mod settings, but it starts with a default playtime of 2 minutes so that you have time to investigate the beautiful bases. By default, vanilla simulations are turned off with a mod setting, but it's advised to turn it back on after you enjoyed the Hall of Fame. 
-
 ### Here is a list of bases currently featured, in no particular order:
 - [DaveMcW: 1 Rocket Defense Per Minute](https://www.reddit.com/r/factorio/comments/3biwcf/one_minute_rocket_defense/). [*29 June 2015 using Factorio 0.11*]. I wrote an in-depth [article](https://alt-f4.blog/ALTF4-13) about how this base works and incredibly well it is built. Note: the ratios are slightly off because of changes in recipes since Factorio 0.11.
 - [Xterminator: Send Supporters to Space](https://www.youtube.com/watch?v=yMcoYkR_qAQ&ab_channel=Xterminator). [*12 September 2017 using Factorio 0.16*] A highly optimized 4 kspm (version equivalent) megabase where he sent his supporters to space in rockets. (Thanks Xterminator for the save!)
@@ -32,6 +30,12 @@ You can set how long each base will play in the mod settings, but it starts with
 - [Ellipticality: Logistic Distribution Center](https://www.reddit.com/r/factorio/comments/j8qrqa/at_the_heart_of_my_vanilla_base_is_a_logistic/)[*10 October 2020 using Factorio 1.0*] A beautiful distribution center for items and fluids that automatically supply and request items to and from modules using circuits. Achieves 1 kspm.
 - [silverwyrm: The Gear Mk2](https://www.reddit.com/r/factorio/comments/iyl6in/the_gear_mk_2_now_with_100_more_gears/). [*24 September 2020 using Factorio 1.0*] After the community enjoyed his first [Gear Mall](https://www.reddit.com/r/factorio/comments/is3mxa/the_gear_a_mall/), silverwyrm expanded his creation and brought us The Gear Mk2!
 - [Kfitik: ≈12 kSPM Vanilla-ish](https://www.reddit.com/r/factorio/comments/jcbsxs/177gw_of_solar/). Started in Factorio 0.17, and runs at 7 UPS.
+
+### Available Settings
+There are settings to modify your viewing experience in the mod settings:
+- You can set *how long* each base will play in seconds. It starts with a default playtime of 2 minutes so that you have time to investigate the beautiful bases. 
+- *Vanilla simulations* are turned off by default, but it's advised to turn it back on after you enjoyed the Hall of Fame.
+- You can turn on *Alt-Mode*, which is off by default.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
