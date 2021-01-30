@@ -41,4 +41,4 @@ There are settings to modify your viewing experience in the mod settings:
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
 
 ### Disclaimers
-I did not build any of the bases showcased. I'm simply compiling a list of  memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know. Also, some bases' functionality might be modified slightly to work better as a menu simulation, while attempting to remain true to the aesthetics.
+I did not build any of the bases showcased. I'm simply compiling a list of memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know. Also, some bases' functionality might be modified slightly to work better as a menu simulation, while attempting to remain true to the aesthetics.
