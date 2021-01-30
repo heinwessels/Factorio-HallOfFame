@@ -1847,7 +1847,7 @@ main_menu_simulations.davemcw_1rdpm = {
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
     rendering.draw_text{text="DaveMcW", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-    rendering.draw_text{text="1 RDPH", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
+    rendering.draw_text{text="1 RDPM", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}
     current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
     rendering.draw_text{text="29 June 2015", surface=game.surfaces.nauvis, target=current_pos, color=text_colour, scale=text_scale}    
   ]],

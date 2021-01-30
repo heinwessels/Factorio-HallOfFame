@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: ??. ??. 2021
+
+  Bugfixes:
+    - Fixed typo in DaveMcW simulation. It's 1 RDPM, not 1 RDPH.
+---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 27. 01. 2021
   Features:
@@ -23,7 +29,7 @@ Date: 11. 12. 2020
     - Added Ant Farm by Griswold.
     - Added Train/Bot Distribution Center by Ellipticality
 
-  Changes:
+  Optimizations:
     - Optimized Gh0stP1rate's Vanilla Megabase.
 
 ---------------------------------------------------------------------------------------------------
@@ -38,7 +44,11 @@ Date: 4. 12. 2020
   Changes:
     - Added dates to entries on mod page.
     - Changed to show dates instead of Factorio versions.
+
+  Optimizations:
     - Attempt at optimizing Lily Rose save.
+
+  Bugfixes:
     - Fixed AccidentalChef save after previous update.
 
 ---------------------------------------------------------------------------------------------------
@@ -47,9 +57,11 @@ Date: 30. 11. 2020
   Features:
     - Mod no longer needs to be unzipped to work! (Thanks devs)
 
-  Changes:
-    - Fixed infinity chest and optimized DaveMcW save.
+  Optimizations:
     - Optimized AccidentalChef save.
+
+  Bugfixes:
+    - Fixed infinity chest and optimized DaveMcW save.
 
 ---------------------------------------------------------------------------------------------------
 Version: 1.1.0

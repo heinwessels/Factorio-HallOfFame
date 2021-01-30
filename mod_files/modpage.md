@@ -4,6 +4,10 @@ Factorio has a rich history of amazing creations, from highly optimized builds t
 
 Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. They will run almost indefinitely, which also makes for an amazing *screensaver*!
 
+Check out this trailer accompanied by beautiful Wintergatan music that showcases the mod (click on the image):
+
+[![Factorio Hall of Fame Trailer](https://github.com/heinwessels/Factorio_HallOfFame/blob/main/youtube_link.jpg?raw=true)](https://youtu.be/pBgLwkLgsWs "Factorio Hall of Fame Trailer")
+
 ### Here is a list of bases currently featured, in no particular order:
 - [DaveMcW: 1 Rocket Defense Per Minute](https://www.reddit.com/r/factorio/comments/3biwcf/one_minute_rocket_defense/). [*29 June 2015 using Factorio 0.11*]. I wrote an in-depth [article](https://alt-f4.blog/ALTF4-13) about how this base works and incredibly well it is built. Note: the ratios are slightly off because of changes in recipes since Factorio 0.11.
 - [Xterminator: Send Supporters to Space](https://www.youtube.com/watch?v=yMcoYkR_qAQ&ab_channel=Xterminator). [*12 September 2017 using Factorio 0.16*] A highly optimized 4 kspm (version equivalent) megabase where he sent his supporters to space in rockets. (Thanks Xterminator for the save!)
