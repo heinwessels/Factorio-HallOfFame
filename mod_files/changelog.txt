@@ -3,6 +3,7 @@ Version: 1.6.0
 Date: ??. ??. 2021
   Features:
     - Added Nefrums Any% Speedrun on 2020-12-04 Former World Record
+    - Added Wube V1.1 Playtesting map
 
   Bugfixes:
     - Fixed typo in DaveMcW simulation. It's 1 RDPM, not 1 RDPH.

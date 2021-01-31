@@ -134,6 +134,35 @@ end
 
 -- Now add all the simulations
 
+main_menu_simulations.wube_11_officemap = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/wube_11_officemap.zip",
+  length = playtime,
+  init =
+  [[
+    game.camera_position = {-467, 460}
+    game.camera_zoom = 0.7
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-471, 475}, -- position
+      {
+        "Wube",        
+        "V1.1 Playtesting",
+        "30 January 2021"
+      },  -- text to display
+      2.5,  -- text scale
+      8 -- rectangle width
+    ) .. [[
+  ]],
+  update =
+  [[    
+  ]]
+}
+
 main_menu_simulations.nefrums_13857 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/nefrums_13857.zip",
