@@ -4,6 +4,8 @@ Factorio has a rich history of amazing creations, from highly optimized builds t
 
 Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. They will run almost indefinitely, which also makes for an amazing *screensaver*!
 
+And remember, this mod won't effect your UPS at all, since these simulations isn't loaded while you're playing your save.
+
 Check out this trailer accompanied by beautiful Wintergatan music that showcases the mod (click on the image):
 
 [![Factorio Hall of Fame Trailer](https://github.com/heinwessels/Factorio_HallOfFame/blob/main/youtube_link.jpg?raw=true)](https://youtu.be/pBgLwkLgsWs "Factorio Hall of Fame Trailer")
@@ -20,6 +22,7 @@ Check out this trailer accompanied by beautiful Wintergatan music that showcases
 - [Accidental Chef: 10 Rockets Per Minute](https://www.reddit.com/r/factorio/comments/5osdaa/my_first_gigafactory_10_rockets_per_minute/). [*18 January 2017 using Factorio 0.14*]. Likely the of the biggest vanilla-ish megabase of the time.
 - [Swolar: 20kSPM 60 UPS](https://www.reddit.com/r/factorio/comments/gely3v/20000_science_per_minute_hybrid_modular_megabase/). [*6 May 2020 using Factorio 0.18*]. Shown is only one of 107 identical, fully contained, modules. At the time it was likely the highest science per minute while maintaining the highest UPS megabase ever built. Built using the editor.
 - [flame_Sla: 30kSPM 60 UPS](https://www.reddit.com/r/technicalfactorio/comments/ks2xtk/20k_spm_201000spm_belts_v30/). [*7 January 2021 using Factorio 1.1*]. This is the biggest and most UPS efficient base ever built, surpassing [Swolar's base](https://www.reddit.com/r/factorio/comments/gely3v/20000_science_per_minute_hybrid_modular_megabase/) by 10 kSPM, and in UPS optimization in Factorio 1.1. Built in the editor it comprises out of 30 identical 1kSPM blocks to achieve 30kSPM. *Note: the linked Reddit-post only mentions 20kSPM, but a [benchmark](https://factoriobox.1au.us/result/f4caa737-2286-49d2-95a9-ae2cad97b36d) was later run on a 30kSPM version that reached 70 UPS!*
+- [Nefrums: Speedrun Any% Former World Record: 1h 38m 58s](https://www.speedrun.com/factorio/run/yo3o8w5y). [*4 December 2021 using Factorio 1.1.4*]. The speedrunning legend, Nefrums, broke the previous world record held by Phoenix27833 by less than a minute with this build. 
 - [Soelless Gaming (P0ober) & JD-Plays: Spaghetti Base](https://www.youtube.com/watch?v=yUUT3C2Xevc&list=PLd4gX1UWnrsBkMQf2ZwyfjXLtdtEOOg13&index=85&ab_channel=SoellessGaming). [*9 May 2020 using Factorio 0.18*]. Beautiful and chaotic spaghetti base which is also used as the [Alt-F4](https://alt-f4.blog/) background.
 - [Soelless Gaming (P0ober): Beautiful Megabase](https://www.youtube.com/watch?v=jjtXHsv5E6M&ab_channel=SoellessGaming). [*31 October 2017 using Factorio 0.15*]. Beautiful belts in a city-block pattern.
 - [Horvenbeestinger: Beautiful Light Megabase](https://www.reddit.com/r/factorio/comments/izym9l/turning_on_the_factory_2500spm/). [*26 September 2020 using Factorio 1.0*]. Absolutely beautiful base, especially at night with the new lighting in Factorio 1.1.
@@ -45,4 +48,6 @@ There are settings to modify your viewing experience in the mod settings:
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. I have a few in mind that will be added soon. If you have any suggestions to new additions into the Hall of Fame, please mention it in the discussion. 
 
 ### Disclaimers
-I did not build any of the bases showcased. I'm simply compiling a list of memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know. Also, some bases' functionality might be modified slightly to work better as a menu simulation, while attempting to remain true to the aesthetics.
+- I did not build any of the bases showcased. I'm simply compiling a list of memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know. 
+- Some bases' functionality might be modified slightly to work better as a menu simulation, while attempting to remain true to the aesthetics.
+- If you're using an overhaul mod (like Krastorio or Space Exploration) then some of the simulations will likely not work correctly.
