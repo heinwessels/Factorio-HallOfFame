@@ -2,6 +2,7 @@
 Version: 1.6.0
 Date: ??. ??. 2021
   Features:
+    - Added AntiElitz Any% Speedrun Factorio 0.14 World Record from 2017-03-26
     - Added Nefrums Any% Speedrun on 2020-12-04 Former World Record
     - Added Wube V1.1 Playtesting map
 
