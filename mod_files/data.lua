@@ -938,8 +938,8 @@ main_menu_simulations.lilyrose_beltmegabase = {
   save = "__HallOfFame__/menu-simulations/lilyrose_belt_megabase.zip",
   length = playtime,
   init =
-  [[
-    game.camera_position = {951009, 950060}
+  [[    
+    game.camera_position = {-90, -14}
     game.camera_zoom = 0.3
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
@@ -947,7 +947,7 @@ main_menu_simulations.lilyrose_beltmegabase = {
     ]] .. alt_info .. [[
 
     ]] .. draw_label_code(
-      {951001.5, 950092}, -- position
+      {-97.5, 18}, -- position
       {
         "Lily Rose",
         "Belt Megabase",
