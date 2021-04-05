@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.0
-Date: ??. ??. ???
+Date: 05. 04. 2021
   Features:
     - Added first Any% Speedrun with Construction Bots by Rain9441.
+    - Added BeeHive by Valkhiya.
     - Added volume modifier setting to mute menu simulations if required.
-
 
   Optimizations:
     - Reduced LilyRose save file size (finally).
@@ -89,7 +89,7 @@ Date: 28. 11. 2020
 
   Changes:
     - Change default playback time to 10 minutes for screensavers.
-  
+
   Bugfixes:
     - Disabling Vanilla Simulations will no longer remove modded simulations as well.
 ---------------------------------------------------------------------------------------------------
