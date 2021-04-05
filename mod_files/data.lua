@@ -139,7 +139,8 @@ end
 main_menu_simulations.V453000_GridLock = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/V453000_GridLock.zip",
-  length = playtime,
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-220, 115}
@@ -175,6 +176,7 @@ main_menu_simulations.antielitz_any15815 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/antielitz_any15815.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-53.5, 90}
@@ -205,6 +207,7 @@ main_menu_simulations.wube_11_officemap = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/wube_11_officemap.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-467, 460}
@@ -234,6 +237,7 @@ main_menu_simulations.nefrums_13857 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/nefrums_13857.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {45.5, 207.5}
@@ -264,6 +268,7 @@ main_menu_simulations.flame_Sla_30x1000spm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/flame_Sla_30x1000spm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[    
     game.camera_position = {585.5, -38.5}
@@ -298,6 +303,7 @@ main_menu_simulations.mangledpork_towns = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/mangledpork_towns.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-174, 489}
@@ -332,6 +338,7 @@ main_menu_simulations.silverwyrm_gear_mk2 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/silverwyrm_gear_mk2.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {6, 292}
@@ -361,6 +368,7 @@ main_menu_simulations.zisteau_meiosis = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/zisteau_meiosis.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-765, 6}
@@ -391,6 +399,7 @@ main_menu_simulations.Ellipticality_logistic_distribution = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/Ellipticality_logistic_distribution.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-184, -58224}
@@ -420,6 +429,7 @@ main_menu_simulations.griswold_ant_farm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/griswold_ant_farm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-820, -1017.5}
@@ -449,6 +459,7 @@ main_menu_simulations.niftymaniac_greygoo1 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/niftymaniac_greygoo1.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {126, -132.5}
@@ -479,6 +490,7 @@ main_menu_simulations.t1024_diag = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/t1024_diag.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-135, -6}
@@ -508,6 +520,7 @@ main_menu_simulations.stevetrov_15rpm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/stevetrov_15rpm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {1636, 1405}
@@ -537,6 +550,7 @@ main_menu_simulations.xterminator_ssts = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/xterminator_ssts.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-1909, -862.5}
@@ -566,6 +580,7 @@ main_menu_simulations.challenge_32x32 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/32x32_challenge.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-41.5, -83}
@@ -617,6 +632,7 @@ main_menu_simulations.kos_mmo_202001 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/kos_mmo_202001.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {506, -560}
@@ -647,6 +663,7 @@ main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/PM_ME_DELICIOUS_FOOD_bagel.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {82.5, -102}
@@ -676,6 +693,7 @@ main_menu_simulations.goose_Burner_inserter_megabase = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {1515, 1295}
@@ -704,7 +722,8 @@ main_menu_simulations.goose_Burner_inserter_megabase = {
 main_menu_simulations.Quazarz_science_rivier = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/Quazarz_science_rivier.zip",
-  length = playtime,
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {28, -147.5}
@@ -734,6 +753,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/soelless_gaming_beautiful.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {11.5, 23.5}
@@ -763,6 +783,7 @@ main_menu_simulations.kfitik_14kpms = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/kfitik_14kpms.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {3120, 1287}
@@ -792,6 +813,7 @@ main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {1029, 712}
@@ -821,6 +843,7 @@ main_menu_simulations.p0ober_jdplays_spaghetti_world = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/p0ober_jdplays_spaghetti_world.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {11.7, -275}
@@ -850,6 +873,7 @@ main_menu_simulations.accidentalchef_10rpm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/accidentalchef_10rpm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-200, 590}
@@ -879,6 +903,7 @@ main_menu_simulations.swolar_20kspm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/swolar_20kspm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {307, -443}
@@ -908,6 +933,7 @@ main_menu_simulations.horvenbeestinger_2500spm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/horvenbeestinger_2500spm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {1595, 100}
@@ -937,6 +963,7 @@ main_menu_simulations.lilyrose_beltmegabase = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/lilyrose_belt_megabase.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[    
     game.camera_position = {-90, -14}
@@ -966,6 +993,7 @@ main_menu_simulations.davemcw_1rdpm = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/davemcw_1rdpm.zip",
   length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
   [[
     game.camera_position = {-185, -338}

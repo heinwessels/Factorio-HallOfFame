@@ -18,5 +18,13 @@ data:extend({
         name = "hall-of-fame-camera-alt-info",        
         setting_type = "startup",
         default_value = false
+    },
+    {
+        type = "double-setting",
+        name = "hall-of-fame-volume-modifier",        
+        setting_type = "startup",
+        default_value = 1,
+        minimum_value = 0,
+        maximum_value = 5
     }
 })

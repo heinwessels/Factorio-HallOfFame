@@ -2,7 +2,7 @@
 Version: 1.7.0
 Date: ??. ??. ???
   Features:
-    - Nothin yet...
+    - Added volume modifier setting to mute menu simulations if required.
 
   Optimizations:
     - Reduced LilyRose save file size (finally).
