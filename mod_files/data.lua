@@ -166,971 +166,999 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
-main_menu_simulations.Valkhiya_Beehive = {
+main_menu_simulations.Stevetrov_monolithic_train_10k = {
   checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Valkhiya_Beehive.zip",
+  save = "__HallOfFame__/menu-simulations/Stevetrov_monolithic_train_10k.zip",
   length = playtime,  
   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
   init =
-  [[
-    -- game.camera_position = {592, 189}
-    game.camera_position = {575, 189}
-    game.camera_zoom = 0.4
+  [[    
+    game.camera_position = {-45, -595}
+    game.camera_zoom = 0.25
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
     ]] .. alt_info .. [[
 
     ]] .. draw_label_code(
-      {608.5, 186}, -- position
+      {-62, -560}, -- position
       {
-        "Valkhiya",        
-        "Beehive",
-        "4 August 2019"
+        "SteveTrov",        
+        "10 kSPM Monolithic Train Base",
+        "7 January 2020"
       },  -- text to display
-      4,  -- text scale
-      13 -- rectangle width
+      6,  -- text scale
+      34 -- rectangle width
     ) .. [[
   ]],
   update = [[]]
 }
 
-main_menu_simulations.rain9441_defaultfirstbots = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/rain9441_defaultfirstbots.zip",
-  length = playtime,  
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {197, -90}
-    game.camera_zoom = 1
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.35
+-- main_menu_simulations.Valkhiya_Beehive = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Valkhiya_Beehive.zip",
+--   length = playtime,  
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     -- game.camera_position = {592, 189}
+--     game.camera_position = {575, 189}
+--     game.camera_zoom = 0.4
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
 
-    ]] .. alt_info .. [[
+--     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
-      {210, -82.5}, -- position
-      {
-        "Rain9441",        
-        "Speedrun Default Settings Factorio 0.15",
-        "First speedrun using Construction Bots",
-        "3 December 2017"
-      },  -- text to display
-      1.8,  -- text scale
-      12.5 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-    ]]..keep_entity_filled_at({177, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
-    ]]..keep_entity_filled_at({175, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
-    ]]..keep_entity_filled_at({196, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
-    ]]..keep_entity_filled_at({198, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
-    ]]..keep_entity_filled_at({216, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
-    ]]..keep_entity_filled_at({218, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]] .. draw_label_code(
+--       {608.5, 186}, -- position
+--       {
+--         "Valkhiya",        
+--         "Beehive",
+--         "4 August 2019"
+--       },  -- text to display
+--       4,  -- text scale
+--       13 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update = [[]]
+-- }
+
+-- main_menu_simulations.rain9441_defaultfirstbots = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/rain9441_defaultfirstbots.zip",
+--   length = playtime,  
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {197, -90}
+--     game.camera_zoom = 1
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.35
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {210, -82.5}, -- position
+--       {
+--         "Rain9441",        
+--         "Speedrun Default Settings Factorio 0.15",
+--         "First speedrun using Construction Bots",
+--         "3 December 2017"
+--       },  -- text to display
+--       1.8,  -- text scale
+--       12.5 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--     ]]..keep_entity_filled_at({177, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]]..keep_entity_filled_at({175, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]]..keep_entity_filled_at({196, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]]..keep_entity_filled_at({198, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]]..keep_entity_filled_at({216, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
+--     ]]..keep_entity_filled_at({218, -90}, "gun-turret", {{name="firearm-magazine", count=50}}, 60)..[[
     
 
-    if game.tick % (60*10) == 0 then
-      local entity_positions = {{177, -90}, {196, -90}, {218, -90}}      
-      local entity = game.surfaces.nauvis.find_entity(
-        "gun-turret", entity_positions[math.random(3)]
-      )
+--     if game.tick % (60*10) == 0 then
+--       local entity_positions = {{177, -90}, {196, -90}, {218, -90}}      
+--       local entity = game.surfaces.nauvis.find_entity(
+--         "gun-turret", entity_positions[math.random(3)]
+--       )
       
-      local position = {x=entity.position.x, y=-150}
+--       local position = {x=entity.position.x, y=-150}
       
-      local command = {type = defines.command.go_to_location, destination_entity = entity, distraction = defines.distraction.none}            
-      local surface = game.surfaces.nauvis
-      local names = {"medium-biter", "small-biter", "small-biter", "small-biter"}
-      for k = 1, 50 do
-        local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}
-        local name = names[math.random(#names)]
-        local biter = surface.create_entity{name = name, position = position}
-        biter.set_command(command)
-      end
-    end 
-  ]]
-}
-
-main_menu_simulations.V453000_GridLock = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/V453000_GridLock.zip",
-  length = playtime,  
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-220, 115}
-    game.camera_zoom = 0.35
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-198, 121}, -- position
-      {
-        "V453000",        
-        "GridLock",
-        "Used by Wube for Roll-Up",
-        "27 March 2018"
-      },  -- text to display
-      5,  -- text scale
-      23 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-    -- Ensure the tank technology is always being researched to keep the labs going.
-    if game.forces[1].technologies['mining-productivity-4'].researched == true then
-      game.forces[1].technologies['mining-productivity-4'].researched = false
-      game.forces[1].add_research('mining-productivity-4')
-    end
-  ]]
-}
-
-main_menu_simulations.antielitz_any15815 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/antielitz_any15815.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-53.5, 90}
-    game.camera_zoom = 0.75
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-33, 100}, -- position
-      {
-        "AntiElitz",        
-        "Speedrun Any% Factorio 0.14",
-        "World Record: 1h 58m 15s",
-        "26 March 2017"
-      },  -- text to display
-      2.2,  -- text scale
-      11.5 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[    
-  ]]
-}
-
-main_menu_simulations.wube_11_officemap = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/wube_11_officemap.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-467, 460}
-    game.camera_zoom = 0.7
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-471, 475}, -- position
-      {
-        "Wube",        
-        "V1.1 Playtesting",
-        "30 January 2021"
-      },  -- text to display
-      2.5,  -- text scale
-      8 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[    
-  ]]
-}
-
-main_menu_simulations.nefrums_13857 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/nefrums_13857.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {45.5, 207.5}
-    game.camera_zoom = 0.6
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {9.5, 199.5}, -- position
-      {
-        "Nefrums",
-        "Speedrun Any%",
-        "Former World Record: 1h 38m 58s",
-        "4 December 2020"
-      },  -- text to display
-      2.5,  -- text scale
-      15 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[    
-  ]]
-}
-
-main_menu_simulations.flame_Sla_30x1000spm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/flame_Sla_30x1000spm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[    
-    game.camera_position = {585.5, -38.5}
-    game.camera_zoom = 0.5
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {599.5, -16.5}, -- position
-      {
-        "flame_Sla",
-        "30 kSPM 60 UPS",
-        "7 January 2021"
-      },  -- text to display
-      3.5,  -- text scale
-      11 -- rectangle width
-    ) .. [[        
-  ]],
-  update =
-  [[
-    -- Ensure the tank technology is always being researched to keep the labs going.
-    if game.forces[1].technologies['mining-productivity-4'].researched == true then
-      game.forces[1].technologies['mining-productivity-4'].researched = false
-      game.forces[1].add_research('mining-productivity-4')
-    end
-  ]]
-}
-
-main_menu_simulations.mangledpork_towns = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/mangledpork_towns.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-174, 489}
-    game.camera_zoom = 0.5
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-144, 506}, -- position
-      {
-        "MangledPork",
-        "Towns",
-        "27 July 2015"
-      },  -- text to display
-      4,  -- text scale
-      12 -- rectangle width
-    ) .. [[
-  ]], 
-  update =
-  [[
-    -- Ensure the tank technology is always being researched to keep the labs going.
-    if game.forces[1].technologies['tank'].researched == true then
-      game.forces[1].technologies['tank'].researched = false
-      game.forces[1].add_research('tank')
-    end
-  ]]
-}
-
-main_menu_simulations.silverwyrm_gear_mk2 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/silverwyrm_gear_mk2.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {6, 292}
-    game.camera_zoom = 0.25
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-90, 287}, -- position
-      {
-        "silverwyrm",
-        "The Gear Mk2",
-        "24 September 2020"
-      },  -- text to display
-      7,  -- text scale
-      25 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.zisteau_meiosis = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/zisteau_meiosis.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-765, 6}
-    game.camera_zoom = 0.3
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-837, 29}, -- position
-      {
-        "Zisteau",
-        "Meiosis",
-        "8 May 2017"
-      },  -- text to display
-      6,  -- text scale
-      15 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-
-main_menu_simulations.Ellipticality_logistic_distribution = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Ellipticality_logistic_distribution.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-184, -58224}
-    game.camera_zoom = 0.35
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-130, -58204}, -- position
-      {
-        "Ellipticality",
-        "Logistic Distribution Center",
-        "10 October 2020"
-      },  -- text to display
-      4.6,  -- text scale
-      23 -- rectangle width
-    ) .. [[
-  ]],  
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.griswold_ant_farm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/griswold_ant_farm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-820, -1017.5}
-    game.camera_zoom = 0.35
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-897, -992}, -- position
-      {
-        "Griswold",
-        "Antfarm 1RPM",
-        "16 October 2017"
-      },  -- text to display
-      4.5,  -- text scale
-      15 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.niftymaniac_greygoo1 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/niftymaniac_greygoo1.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {126, -132.5}
-    game.camera_zoom = 0.3
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {55, -115}, -- position
-      {
-        "NiftyManiac",
-        "GreyGoo Mk I",
-        "A Self-Expanding Factory",
-        "16 February 2017"
-      },  -- text to display
-      5,  -- text scale
-      23 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.t1024_diag = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/t1024_diag.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-135, -6}
-    game.camera_zoom = 0.45
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-162, 15}, -- position
-      {
-        "T-1024",
-        "Diagonal Base",
-        "31 March 2018"
-      },  -- text to display
-      3.8,  -- text scale
-      11 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.stevetrov_15rpm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/stevetrov_15rpm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {1636, 1405}
-    game.camera_zoom = 0.365
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {1567, 1389.5}, -- position
-      {
-        "SteveTrov",
-        "15 RPM",
-        "13 April 2017"
-      },  -- text to display
-      4.5,  -- text scale
-      12 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.xterminator_ssts = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/xterminator_ssts.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-1909, -862.5}
-    game.camera_zoom = 0.26
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-1956, -820}, -- position
-      {
-        "Xterminator",
-        "Send Supporters to Space",
-        "12 September 2017"
-      },  -- text to display
-      6,  -- text scale
-      28 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.challenge_32x32 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/32x32_challenge.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-41.5, -83}
-    game.camera_zoom = 0.65
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-48, -64}, -- position
-      {
-        "One Chunk Factory Challenge",
-        "All sciences within 32x32 tiles",
-        "December 2019"
-      },  -- text to display
-      2.4,  -- text scale
-      13 -- rectangle width
-    ) .. [[
-
-    ]] .. draw_label_code(
-      {-72, -63.5}, -- position
-      {
-        "acmemyst",
-        "9.2 SPM"
-      },  -- text to display
-      2.4,  -- text scale
-      6, -- rectangle width
-      '1st' -- overwrite header
-    ) .. [[
-
-    ]] .. draw_label_code(
-      {-18, -63.5}, -- position
-      {
-        "ostertoasterii",
-        "8.7 SPM"
-      },  -- text to display
-      2.4,  -- text scale
-      6, -- rectangle width
-      '2nd' -- overwrite header
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.kos_mmo_202001 = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/kos_mmo_202001.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {506, -560}
-    game.camera_zoom = 0.4
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {445, -588}, -- position
-      {
-        "KatherineOfSky and Caledorn",
-        "Massive Multiplayer World Record",
-        "Peak 521 Concurrent Players",
-        "25 January 2020"
-      },  -- text to display
-      4,  -- text scale
-      25 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/PM_ME_DELICIOUS_FOOD_bagel.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {82.5, -102}
-    game.camera_zoom = 0.30
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {135, -77}, -- position
-      {
-        "PM_ME_DELICIOUS_FOOD",
-        "BadBagel Spaghetti",
-        "30 October 2020"
-      },  -- text to display
-      5,  -- text scale
-      25 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.goose_Burner_inserter_megabase = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {1515, 1295}
-    game.camera_zoom = 0.30
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {1562, 1333}, -- position
-      {
-        "Goose",
-        "Burner Inserter Megabase",
-        "September 2019"
-      },  -- text to display
-      5.5,  -- text scale
-      26 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.Quazarz_science_rivier = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Quazarz_science_rivier.zip",
-  length = playtime,  
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {28, -147.5}
-    game.camera_zoom = 0.30
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {79, -180}, -- position
-      {
-        "Quazarz_",
-        "Science River",
-        "1 May 2019"
-      },  -- text to display
-      6,  -- text scale
-      18 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.soelless_gaming_beautiful = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/soelless_gaming_beautiful.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {11.5, 23.5}
-    game.camera_zoom = 0.45
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {36, -7}, -- position
-      {
-        "Soelless Gaming",
-        "Beautiful Megabase",
-        "31 October 2017"
-      },  -- text to display
-      3.5,  -- text scale
-      13 -- rectangle width
-    ) .. [[
-  ]],  
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.kfitik_14kpms = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/kfitik_14kpms.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {3120, 1287}
-    game.camera_zoom = 0.5
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {3115.5, 1307}, -- position
-      {
-        "Kfitik",
-        "14 kSPM 7 UPS",
-        "16 October 2020"
-      },  -- text to display
-      3,  -- text scale
-      9 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {1029, 712}
-    game.camera_zoom = 0.3
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {950, 670}, -- position
-      {
-        "Gh0stP1rate and Hamiebarmund",
-        "10 kSPM Vanilla",
-        "7 November 2020"
-      },  -- text to display
-      5.5,  -- text scale
-      34 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.p0ober_jdplays_spaghetti_world = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/p0ober_jdplays_spaghetti_world.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {11.7, -275}
-    game.camera_zoom = 0.35
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-50, -259}, -- position
-      {
-        "P0ober & JD-Plays",
-        "Spaghetti Base",
-        "9 May 2020"
-      },  -- text to display
-      5,  -- text scale
-      17 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.accidentalchef_10rpm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/accidentalchef_10rpm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-200, 590}
-    game.camera_zoom = 0.8
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-176.5, 603}, -- position
-      {
-        "AccidentalChef",
-        "10 RPM",
-        "18 January 2017"
-      },  -- text to display
-      2.5,  -- text scale
-      7.5 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.swolar_20kspm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/swolar_20kspm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {307, -443}
-    game.camera_zoom = 0.35
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {354, -411}, -- position
-      {
-        "swolar",
-        "20 kSPM 60 UPS",
-        "6 May 2020"
-      },  -- text to display
-      4.5,  -- text scale
-      15 -- rectangle width
-    ) .. [[
-  ]],  
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.horvenbeestinger_2500spm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/horvenbeestinger_2500spm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {1595, 100}
-    game.camera_zoom = 0.25
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 0.5
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {1660, 142}, -- position
-      {
-        "Horvenbeestinger",
-        "Beautiful Megabase",
-        "26 September 2020"
-      },  -- text to display
-      6,  -- text scale
-      24 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.lilyrose_beltmegabase = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/lilyrose_belt_megabase.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[    
-    game.camera_position = {-90, -14}
-    game.camera_zoom = 0.3
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-97.5, 18}, -- position
-      {
-        "Lily Rose",
-        "Belt Megabase",
-        "17 April 2018"
-      },  -- text to display
-      5,  -- text scale
-      15 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
-
-main_menu_simulations.davemcw_1rdpm = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/davemcw_1rdpm.zip",
-  length = playtime,
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[
-    game.camera_position = {-185, -338}
-    game.camera_zoom = 0.6
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
-
-    ]] .. alt_info .. [[
-
-    ]] .. draw_label_code(
-      {-188.5, -322}, -- position
-      {
-        "DaveMcW",
-        "1 RDPM",
-        "29 June 2015"
-      },  -- text to display
-      3,  -- text scale
-      7 -- rectangle width
-    ) .. [[
-  ]],
-  update =
-  [[
-  ]]
-}
+--       local command = {type = defines.command.go_to_location, destination_entity = entity, distraction = defines.distraction.none}            
+--       local surface = game.surfaces.nauvis
+--       local names = {"medium-biter", "small-biter", "small-biter", "small-biter"}
+--       for k = 1, 50 do
+--         local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}
+--         local name = names[math.random(#names)]
+--         local biter = surface.create_entity{name = name, position = position}
+--         biter.set_command(command)
+--       end
+--     end 
+--   ]]
+-- }
+
+-- main_menu_simulations.V453000_GridLock = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/V453000_GridLock.zip",
+--   length = playtime,  
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-220, 115}
+--     game.camera_zoom = 0.35
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-198, 121}, -- position
+--       {
+--         "V453000",        
+--         "GridLock",
+--         "Used by Wube for Roll-Up",
+--         "27 March 2018"
+--       },  -- text to display
+--       5,  -- text scale
+--       23 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--     -- Ensure the tank technology is always being researched to keep the labs going.
+--     if game.forces[1].technologies['mining-productivity-4'].researched == true then
+--       game.forces[1].technologies['mining-productivity-4'].researched = false
+--       game.forces[1].add_research('mining-productivity-4')
+--     end
+--   ]]
+-- }
+
+-- main_menu_simulations.antielitz_any15815 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/antielitz_any15815.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-53.5, 90}
+--     game.camera_zoom = 0.75
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-33, 100}, -- position
+--       {
+--         "AntiElitz",        
+--         "Speedrun Any% Factorio 0.14",
+--         "World Record: 1h 58m 15s",
+--         "26 March 2017"
+--       },  -- text to display
+--       2.2,  -- text scale
+--       11.5 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[    
+--   ]]
+-- }
+
+-- main_menu_simulations.wube_11_officemap = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/wube_11_officemap.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-467, 460}
+--     game.camera_zoom = 0.7
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-471, 475}, -- position
+--       {
+--         "Wube",        
+--         "V1.1 Playtesting",
+--         "30 January 2021"
+--       },  -- text to display
+--       2.5,  -- text scale
+--       8 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[    
+--   ]]
+-- }
+
+-- main_menu_simulations.nefrums_13857 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/nefrums_13857.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {45.5, 207.5}
+--     game.camera_zoom = 0.6
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {9.5, 199.5}, -- position
+--       {
+--         "Nefrums",
+--         "Speedrun Any%",
+--         "Former World Record: 1h 38m 58s",
+--         "4 December 2020"
+--       },  -- text to display
+--       2.5,  -- text scale
+--       15 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[    
+--   ]]
+-- }
+
+-- main_menu_simulations.flame_Sla_30x1000spm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/flame_Sla_30x1000spm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[    
+--     game.camera_position = {585.5, -38.5}
+--     game.camera_zoom = 0.5
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {599.5, -16.5}, -- position
+--       {
+--         "flame_Sla",
+--         "30 kSPM 60 UPS",
+--         "7 January 2021"
+--       },  -- text to display
+--       3.5,  -- text scale
+--       11 -- rectangle width
+--     ) .. [[        
+--   ]],
+--   update =
+--   [[
+--     -- Ensure the tank technology is always being researched to keep the labs going.
+--     if game.forces[1].technologies['mining-productivity-4'].researched == true then
+--       game.forces[1].technologies['mining-productivity-4'].researched = false
+--       game.forces[1].add_research('mining-productivity-4')
+--     end
+--   ]]
+-- }
+
+-- main_menu_simulations.mangledpork_towns = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/mangledpork_towns.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-174, 489}
+--     game.camera_zoom = 0.5
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-144, 506}, -- position
+--       {
+--         "MangledPork",
+--         "Towns",
+--         "27 July 2015"
+--       },  -- text to display
+--       4,  -- text scale
+--       12 -- rectangle width
+--     ) .. [[
+--   ]], 
+--   update =
+--   [[
+--     -- Ensure the tank technology is always being researched to keep the labs going.
+--     if game.forces[1].technologies['tank'].researched == true then
+--       game.forces[1].technologies['tank'].researched = false
+--       game.forces[1].add_research('tank')
+--     end
+--   ]]
+-- }
+
+-- main_menu_simulations.silverwyrm_gear_mk2 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/silverwyrm_gear_mk2.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {6, 292}
+--     game.camera_zoom = 0.25
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-90, 287}, -- position
+--       {
+--         "silverwyrm",
+--         "The Gear Mk2",
+--         "24 September 2020"
+--       },  -- text to display
+--       7,  -- text scale
+--       25 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.zisteau_meiosis = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/zisteau_meiosis.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-765, 6}
+--     game.camera_zoom = 0.3
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-837, 29}, -- position
+--       {
+--         "Zisteau",
+--         "Meiosis",
+--         "8 May 2017"
+--       },  -- text to display
+--       6,  -- text scale
+--       15 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+
+-- main_menu_simulations.Ellipticality_logistic_distribution = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Ellipticality_logistic_distribution.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-184, -58224}
+--     game.camera_zoom = 0.35
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-130, -58204}, -- position
+--       {
+--         "Ellipticality",
+--         "Logistic Distribution Center",
+--         "10 October 2020"
+--       },  -- text to display
+--       4.6,  -- text scale
+--       23 -- rectangle width
+--     ) .. [[
+--   ]],  
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.griswold_ant_farm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/griswold_ant_farm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-820, -1017.5}
+--     game.camera_zoom = 0.35
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-897, -992}, -- position
+--       {
+--         "Griswold",
+--         "Antfarm 1RPM",
+--         "16 October 2017"
+--       },  -- text to display
+--       4.5,  -- text scale
+--       15 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.niftymaniac_greygoo1 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/niftymaniac_greygoo1.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {126, -132.5}
+--     game.camera_zoom = 0.3
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {55, -115}, -- position
+--       {
+--         "NiftyManiac",
+--         "GreyGoo Mk I",
+--         "A Self-Expanding Factory",
+--         "16 February 2017"
+--       },  -- text to display
+--       5,  -- text scale
+--       23 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.t1024_diag = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/t1024_diag.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-135, -6}
+--     game.camera_zoom = 0.45
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-162, 15}, -- position
+--       {
+--         "T-1024",
+--         "Diagonal Base",
+--         "31 March 2018"
+--       },  -- text to display
+--       3.8,  -- text scale
+--       11 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.stevetrov_15rpm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/stevetrov_15rpm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {1636, 1405}
+--     game.camera_zoom = 0.365
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {1567, 1389.5}, -- position
+--       {
+--         "SteveTrov",
+--         "15 RPM",
+--         "13 April 2017"
+--       },  -- text to display
+--       4.5,  -- text scale
+--       12 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.xterminator_ssts = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/xterminator_ssts.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-1909, -862.5}
+--     game.camera_zoom = 0.26
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-1956, -820}, -- position
+--       {
+--         "Xterminator",
+--         "Send Supporters to Space",
+--         "12 September 2017"
+--       },  -- text to display
+--       6,  -- text scale
+--       28 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.challenge_32x32 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/32x32_challenge.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-41.5, -83}
+--     game.camera_zoom = 0.65
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-48, -64}, -- position
+--       {
+--         "One Chunk Factory Challenge",
+--         "All sciences within 32x32 tiles",
+--         "December 2019"
+--       },  -- text to display
+--       2.4,  -- text scale
+--       13 -- rectangle width
+--     ) .. [[
+
+--     ]] .. draw_label_code(
+--       {-72, -63.5}, -- position
+--       {
+--         "acmemyst",
+--         "9.2 SPM"
+--       },  -- text to display
+--       2.4,  -- text scale
+--       6, -- rectangle width
+--       '1st' -- overwrite header
+--     ) .. [[
+
+--     ]] .. draw_label_code(
+--       {-18, -63.5}, -- position
+--       {
+--         "ostertoasterii",
+--         "8.7 SPM"
+--       },  -- text to display
+--       2.4,  -- text scale
+--       6, -- rectangle width
+--       '2nd' -- overwrite header
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.kos_mmo_202001 = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/kos_mmo_202001.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {506, -560}
+--     game.camera_zoom = 0.4
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {445, -588}, -- position
+--       {
+--         "KatherineOfSky and Caledorn",
+--         "Massive Multiplayer World Record",
+--         "Peak 521 Concurrent Players",
+--         "25 January 2020"
+--       },  -- text to display
+--       4,  -- text scale
+--       25 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/PM_ME_DELICIOUS_FOOD_bagel.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {82.5, -102}
+--     game.camera_zoom = 0.30
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {135, -77}, -- position
+--       {
+--         "PM_ME_DELICIOUS_FOOD",
+--         "BadBagel Spaghetti",
+--         "30 October 2020"
+--       },  -- text to display
+--       5,  -- text scale
+--       25 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.goose_Burner_inserter_megabase = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {1515, 1295}
+--     game.camera_zoom = 0.30
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {1562, 1333}, -- position
+--       {
+--         "Goose",
+--         "Burner Inserter Megabase",
+--         "September 2019"
+--       },  -- text to display
+--       5.5,  -- text scale
+--       26 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.Quazarz_science_rivier = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Quazarz_science_rivier.zip",
+--   length = playtime,  
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {28, -147.5}
+--     game.camera_zoom = 0.30
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {79, -180}, -- position
+--       {
+--         "Quazarz_",
+--         "Science River",
+--         "1 May 2019"
+--       },  -- text to display
+--       6,  -- text scale
+--       18 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.soelless_gaming_beautiful = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/soelless_gaming_beautiful.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {11.5, 23.5}
+--     game.camera_zoom = 0.45
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {36, -7}, -- position
+--       {
+--         "Soelless Gaming",
+--         "Beautiful Megabase",
+--         "31 October 2017"
+--       },  -- text to display
+--       3.5,  -- text scale
+--       13 -- rectangle width
+--     ) .. [[
+--   ]],  
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.kfitik_14kpms = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/kfitik_14kpms.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {3120, 1287}
+--     game.camera_zoom = 0.5
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {3115.5, 1307}, -- position
+--       {
+--         "Kfitik",
+--         "14 kSPM 7 UPS",
+--         "16 October 2020"
+--       },  -- text to display
+--       3,  -- text scale
+--       9 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Gh0stP1rate_vanilla_10kspm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {1029, 712}
+--     game.camera_zoom = 0.3
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {950, 670}, -- position
+--       {
+--         "Gh0stP1rate and Hamiebarmund",
+--         "10 kSPM Vanilla",
+--         "7 November 2020"
+--       },  -- text to display
+--       5.5,  -- text scale
+--       34 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.p0ober_jdplays_spaghetti_world = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/p0ober_jdplays_spaghetti_world.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {11.7, -275}
+--     game.camera_zoom = 0.35
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-50, -259}, -- position
+--       {
+--         "P0ober & JD-Plays",
+--         "Spaghetti Base",
+--         "9 May 2020"
+--       },  -- text to display
+--       5,  -- text scale
+--       17 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.accidentalchef_10rpm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/accidentalchef_10rpm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-200, 590}
+--     game.camera_zoom = 0.8
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-176.5, 603}, -- position
+--       {
+--         "AccidentalChef",
+--         "10 RPM",
+--         "18 January 2017"
+--       },  -- text to display
+--       2.5,  -- text scale
+--       7.5 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.swolar_20kspm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/swolar_20kspm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {307, -443}
+--     game.camera_zoom = 0.35
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {354, -411}, -- position
+--       {
+--         "swolar",
+--         "20 kSPM 60 UPS",
+--         "6 May 2020"
+--       },  -- text to display
+--       4.5,  -- text scale
+--       15 -- rectangle width
+--     ) .. [[
+--   ]],  
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.horvenbeestinger_2500spm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/horvenbeestinger_2500spm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {1595, 100}
+--     game.camera_zoom = 0.25
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 0.5
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {1660, 142}, -- position
+--       {
+--         "Horvenbeestinger",
+--         "Beautiful Megabase",
+--         "26 September 2020"
+--       },  -- text to display
+--       6,  -- text scale
+--       24 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.lilyrose_beltmegabase = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/lilyrose_belt_megabase.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[    
+--     game.camera_position = {-90, -14}
+--     game.camera_zoom = 0.3
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-97.5, 18}, -- position
+--       {
+--         "Lily Rose",
+--         "Belt Megabase",
+--         "17 April 2018"
+--       },  -- text to display
+--       5,  -- text scale
+--       15 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }
+
+-- main_menu_simulations.davemcw_1rdpm = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/davemcw_1rdpm.zip",
+--   length = playtime,
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[
+--     game.camera_position = {-185, -338}
+--     game.camera_zoom = 0.6
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
+
+--     ]] .. alt_info .. [[
+
+--     ]] .. draw_label_code(
+--       {-188.5, -322}, -- position
+--       {
+--         "DaveMcW",
+--         "1 RDPM",
+--         "29 June 2015"
+--       },  -- text to display
+--       3,  -- text scale
+--       7 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update =
+--   [[
+--   ]]
+-- }

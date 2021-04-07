@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: ??. ??. ??
+  Features:
+    - Added 10kSPM Monolithic Train Base by SteveTrov.
+    
+---------------------------------------------------------------------------------------------------
 Version: 1.7.0
 Date: 05. 04. 2021
   Features:
-    - Added first Any% Speedrun with Construction Bots by Rain9441.
+    - Added first Default Settings Speedrun with Construction Bots by Rain9441.
     - Added BeeHive by Valkhiya.
     - Added volume modifier setting to mute menu simulations if required.
 
