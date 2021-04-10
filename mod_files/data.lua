@@ -166,33 +166,33 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
-main_menu_simulations.Stevetrov_monolithic_train_10k = {
-  checkboard = false,
-  save = "__HallOfFame__/menu-simulations/Stevetrov_monolithic_train_10k.zip",
-  length = playtime,  
-  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
-  init =
-  [[    
-    game.camera_position = {-45, -595}
-    game.camera_zoom = 0.25
-    game.tick_paused = false
-    game.surfaces.nauvis.daytime = 1
+-- main_menu_simulations.Stevetrov_monolithic_train_10k = {
+--   checkboard = false,
+--   save = "__HallOfFame__/menu-simulations/Stevetrov_monolithic_train_10k.zip",
+--   length = playtime,  
+--   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+--   init =
+--   [[    
+--     game.camera_position = {-45, -595}
+--     game.camera_zoom = 0.25
+--     game.tick_paused = false
+--     game.surfaces.nauvis.daytime = 1
 
-    ]] .. alt_info .. [[
+--     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
-      {-62, -560}, -- position
-      {
-        "SteveTrov",        
-        "10 kSPM Monolithic Train Base",
-        "7 January 2020"
-      },  -- text to display
-      6,  -- text scale
-      34 -- rectangle width
-    ) .. [[
-  ]],
-  update = [[]]
-}
+--     ]] .. draw_label_code(
+--       {-62, -560}, -- position
+--       {
+--         "SteveTrov",        
+--         "10 kSPM Monolithic Train Base",
+--         "7 January 2020"
+--       },  -- text to display
+--       6,  -- text scale
+--       34 -- rectangle width
+--     ) .. [[
+--   ]],
+--   update = [[]]
+-- }
 
 -- main_menu_simulations.Valkhiya_Beehive = {
 --   checkboard = false,
@@ -833,35 +833,35 @@ main_menu_simulations.Stevetrov_monolithic_train_10k = {
 --   ]]
 -- }
 
--- main_menu_simulations.goose_Burner_inserter_megabase = {
---   checkboard = false,
---   save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
---   length = playtime,
---   volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
---   init =
---   [[
---     game.camera_position = {1515, 1295}
---     game.camera_zoom = 0.30
---     game.tick_paused = false
---     game.surfaces.nauvis.daytime = 1
+main_menu_simulations.goose_Burner_inserter_megabase = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/goose_Burner_inserter_megabase.zip",
+  length = playtime,
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+  init =
+  [[
+    game.camera_position = {1515, 1295}
+    game.camera_zoom = 0.35
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
 
---     ]] .. alt_info .. [[
+    ]] .. alt_info .. [[
 
---     ]] .. draw_label_code(
---       {1562, 1333}, -- position
---       {
---         "Goose",
---         "Burner Inserter Megabase",
---         "September 2019"
---       },  -- text to display
---       5.5,  -- text scale
---       26 -- rectangle width
---     ) .. [[
---   ]],
---   update =
---   [[
---   ]]
--- }
+    ]] .. draw_label_code(
+      {1504, 1263}, -- position
+      {
+        "Goose",
+        "Burner Inserter Megabase",
+        "September 2019"
+      },  -- text to display
+      4.5,  -- text scale
+      22 -- rectangle width
+    ) .. [[
+  ]],
+  update =
+  [[
+  ]]
+}
 
 -- main_menu_simulations.Quazarz_science_rivier = {
 --   checkboard = false,
