@@ -33,6 +33,7 @@ end
 
 -- Define some constants
 local playtime = 60 * settings.startup["hall-of-fame-playback-time"].value
+local zoom_modifier = settings.startup["hall-of-fame-zoom-modifier"].value
 
 local alt_info = "" 
 if settings.startup["hall-of-fame-camera-alt-info"].value then alt_info = "game.camera_alt_info = true" end
@@ -174,7 +175,7 @@ main_menu_simulations.Stevetrov_monolithic_train_10k = {
   init =
   [[    
     game.camera_position = {-45, -595}
-    game.camera_zoom = 0.25
+    game.camera_zoom = ]]..(zoom_modifier * 0.25)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -203,7 +204,7 @@ main_menu_simulations.Valkhiya_Beehive = {
   [[
     -- game.camera_position = {592, 189}
     game.camera_position = {575, 189}
-    game.camera_zoom = 0.4
+    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -231,7 +232,7 @@ main_menu_simulations.rain9441_defaultfirstbots = {
   init =
   [[
     game.camera_position = {197, -90}
-    game.camera_zoom = 1
+    game.camera_zoom = ]]..(zoom_modifier * 1)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.35
 
@@ -267,7 +268,7 @@ main_menu_simulations.rain9441_defaultfirstbots = {
       
       local position = {x=entity.position.x, y=-150}
       
-      local command = {type = defines.command.go_to_location, destination_entity = entity, distraction = defines.distraction.none}            
+      local command = {type = defines.command.attack, target = entity, distraction = defines.distraction.none}            
       local surface = game.surfaces.nauvis
       local names = {"medium-biter", "small-biter", "small-biter", "small-biter"}
       for k = 1, 50 do
@@ -288,7 +289,7 @@ main_menu_simulations.V453000_GridLock = {
   init =
   [[
     game.camera_position = {-220, 115}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -299,7 +300,7 @@ main_menu_simulations.V453000_GridLock = {
       {
         "V453000",        
         "GridLock",
-        "Used by Wube for Roll-Up",
+        "Factorio.com Background",
         "27 March 2018"
       },  -- text to display
       5,  -- text scale
@@ -324,7 +325,7 @@ main_menu_simulations.antielitz_any15815 = {
   init =
   [[
     game.camera_position = {-53.5, 90}
-    game.camera_zoom = 0.75
+    game.camera_zoom = ]]..(zoom_modifier * 0.75)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -355,7 +356,7 @@ main_menu_simulations.wube_11_officemap = {
   init =
   [[
     game.camera_position = {-467, 460}
-    game.camera_zoom = 0.7
+    game.camera_zoom = ]]..(zoom_modifier * 0.7)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -385,7 +386,7 @@ main_menu_simulations.nefrums_13857 = {
   init =
   [[
     game.camera_position = {45.5, 207.5}
-    game.camera_zoom = 0.6
+    game.camera_zoom = ]]..(zoom_modifier * 0.6)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -416,7 +417,7 @@ main_menu_simulations.flame_Sla_30x1000spm = {
   init =
   [[    
     game.camera_position = {585.5, -38.5}
-    game.camera_zoom = 0.5
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -451,7 +452,7 @@ main_menu_simulations.mangledpork_towns = {
   init =
   [[
     game.camera_position = {-174, 489}
-    game.camera_zoom = 0.5
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -486,7 +487,7 @@ main_menu_simulations.silverwyrm_gear_mk2 = {
   init =
   [[
     game.camera_position = {6, 292}
-    game.camera_zoom = 0.25
+    game.camera_zoom = ]]..(zoom_modifier * 0.25)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -516,7 +517,7 @@ main_menu_simulations.zisteau_meiosis = {
   init =
   [[
     game.camera_position = {-765, 6}
-    game.camera_zoom = 0.3
+    game.camera_zoom = ]]..(zoom_modifier * 0.3)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -547,7 +548,7 @@ main_menu_simulations.Ellipticality_logistic_distribution = {
   init =
   [[
     game.camera_position = {-184, -58224}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -577,7 +578,7 @@ main_menu_simulations.griswold_ant_farm = {
   init =
   [[
     game.camera_position = {-820, -1017.5}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -607,7 +608,7 @@ main_menu_simulations.niftymaniac_greygoo1 = {
   init =
   [[
     game.camera_position = {126, -132.5}
-    game.camera_zoom = 0.3
+    game.camera_zoom = ]]..(zoom_modifier * 0.3)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -638,7 +639,7 @@ main_menu_simulations.t1024_diag = {
   init =
   [[
     game.camera_position = {-135, -6}
-    game.camera_zoom = 0.45
+    game.camera_zoom = ]]..(zoom_modifier * 0.45)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -668,7 +669,7 @@ main_menu_simulations.stevetrov_15rpm = {
   init =
   [[
     game.camera_position = {1636, 1405}
-    game.camera_zoom = 0.365
+    game.camera_zoom = ]]..(zoom_modifier * 0.365)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -698,7 +699,7 @@ main_menu_simulations.xterminator_ssts = {
   init =
   [[
     game.camera_position = {-1909, -862.5}
-    game.camera_zoom = 0.26
+    game.camera_zoom = ]]..(zoom_modifier * 0.26)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -728,7 +729,7 @@ main_menu_simulations.challenge_32x32 = {
   init =
   [[
     game.camera_position = {-41.5, -83}
-    game.camera_zoom = 0.65
+    game.camera_zoom = ]]..(zoom_modifier * 0.65)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -780,7 +781,7 @@ main_menu_simulations.kos_mmo_202001 = {
   init =
   [[
     game.camera_position = {506, -560}
-    game.camera_zoom = 0.4
+    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -811,7 +812,7 @@ main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
   init =
   [[
     game.camera_position = {82.5, -102}
-    game.camera_zoom = 0.30
+    game.camera_zoom = ]]..(zoom_modifier * 0.30)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -841,7 +842,7 @@ main_menu_simulations.goose_Burner_inserter_megabase = {
   init =
   [[
     game.camera_position = {1515, 1295}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -871,7 +872,7 @@ main_menu_simulations.Quazarz_science_rivier = {
   init =
   [[
     game.camera_position = {28, -147.5}
-    game.camera_zoom = 0.30
+    game.camera_zoom = ]]..(zoom_modifier * 0.30)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -901,7 +902,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
   init =
   [[
     game.camera_position = {11.5, 23.5}
-    game.camera_zoom = 0.45
+    game.camera_zoom = ]]..(zoom_modifier * 0.45)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -931,7 +932,7 @@ main_menu_simulations.kfitik_14kpms = {
   init =
   [[
     game.camera_position = {3120, 1287}
-    game.camera_zoom = 0.5
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -961,7 +962,7 @@ main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
   init =
   [[
     game.camera_position = {1029, 712}
-    game.camera_zoom = 0.3
+    game.camera_zoom = ]]..(zoom_modifier * 0.3)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -991,7 +992,7 @@ main_menu_simulations.p0ober_jdplays_spaghetti_world = {
   init =
   [[
     game.camera_position = {11.7, -275}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -1021,7 +1022,7 @@ main_menu_simulations.accidentalchef_10rpm = {
   init =
   [[
     game.camera_position = {-200, 590}
-    game.camera_zoom = 0.8
+    game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -1051,7 +1052,7 @@ main_menu_simulations.swolar_20kspm = {
   init =
   [[
     game.camera_position = {307, -443}
-    game.camera_zoom = 0.35
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -1081,7 +1082,7 @@ main_menu_simulations.horvenbeestinger_2500spm = {
   init =
   [[
     game.camera_position = {1595, 100}
-    game.camera_zoom = 0.25
+    game.camera_zoom = ]]..(zoom_modifier * 0.25)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
 
@@ -1111,7 +1112,7 @@ main_menu_simulations.lilyrose_beltmegabase = {
   init =
   [[    
     game.camera_position = {-90, -14}
-    game.camera_zoom = 0.3
+    game.camera_zoom = ]]..(zoom_modifier * 0.3)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -1141,7 +1142,7 @@ main_menu_simulations.davemcw_1rdpm = {
   init =
   [[
     game.camera_position = {-185, -338}
-    game.camera_zoom = 0.6
+    game.camera_zoom = ]]..(zoom_modifier * 0.6)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 

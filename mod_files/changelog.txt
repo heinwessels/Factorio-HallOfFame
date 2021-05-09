@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.8.1
+Date: 09. 4. 2021
+  Features:
+    - Added setting to change zoom level for varying display sizes.
+  Changes:
+    - GridLock description now mentions Factorio.com website.
+  Bugfixes:
+    - Biters will now attack, and not simply run to Rain9441's base.
+---------------------------------------------------------------------------------------------------
 Version: 1.8.0
 Date: 10. 4. 2021
   Features:

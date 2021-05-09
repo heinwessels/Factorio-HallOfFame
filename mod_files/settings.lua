@@ -26,5 +26,13 @@ data:extend({
         default_value = 1,
         minimum_value = 0,
         maximum_value = 5
-    }
+    },
+    {
+        type = "double-setting",
+        name = "hall-of-fame-zoom-modifier",        
+        setting_type = "startup",
+        default_value = 1,
+        minimum_value = 0.5,
+        maximum_value = 2.0
+    },
 })
