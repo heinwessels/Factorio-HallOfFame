@@ -50,6 +50,7 @@ There are settings to modify your viewing experience in the mod settings:
 - *Vanilla simulations* are turned off by default, but it's advised to turn it back on after you enjoyed the Hall of Fame.
 - You can turn on *Alt-Mode*, which is off by default.
 - The sound of the simulations can be softer or louder using the *Volume Modifier*. Set it to `0` to mute.
+- Different resolution screens will display the simulations at different zoom levels. Adjust the *Zoom Modifier* if it doesn't fit nicely on your screen. Lower values for smaller screens, and higher for bigger screens. Default 1.
 
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. If you have any suggestions for new additions to the Hall of Fame, please mention them in the discussion. 
