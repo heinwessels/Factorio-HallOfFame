@@ -153,7 +153,7 @@ function keep_entity_filled_at(position, type, items, every)
       if game.tick % ]]..every..[[ == 0 then        
         local entity = game.surfaces.nauvis.find_entity(
           "]]..type..[[", {]]..position[1]..[[,]]..position[2]..[[})
-        if entity then
+        if entity and entity.valid then
           local inventory = entity.get_inventory(defines.inventory.turret_ammo)
           inventory.clear()        
           ]]..item_add_list..[[
@@ -261,22 +261,29 @@ main_menu_simulations.rain9441_defaultfirstbots = {
     
 
     if game.tick % (60*10) == 0 then
-      local entity_positions = {{177, -90}, {196, -90}, {218, -90}}      
+      local entity_positions = {{x=177, y=-90}, {x=196, y=-90}, {x=218, y=-90}}      
       local entity = game.surfaces.nauvis.find_entity(
         "gun-turret", entity_positions[math.random(3)]
       )
       
-      local position = {x=entity.position.x, y=-150}
-      
-      local command = {type = defines.command.attack, target = entity, distraction = defines.distraction.none}            
-      local surface = game.surfaces.nauvis
-      local names = {"medium-biter", "small-biter", "small-biter", "small-biter"}
-      for k = 1, 50 do
-        local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}
-        local name = names[math.random(#names)]
-        local biter = surface.create_entity{name = name, position = position}
-        biter.set_command(command)
-      end
+      local position
+      local command = { }
+      if entity and entity.valid then
+        position = {x=entity.position.x, y=-150}
+        command = {
+          type = defines.command.attack, 
+          target = entity, 
+          distraction = defines.distraction.none
+        }
+        local surface = game.surfaces.nauvis
+        local names = {"medium-biter", "medium-biter", "small-biter", "small-biter"}
+        for k = 1, 50 do
+          local spawn_position = {position.x + math.random(-5, 5), position.y + math.random(-10, 10)}
+          local name = names[math.random(#names)]
+          local biter = surface.create_entity{name = name, position = position}
+          biter.set_command(command)
+        end
+      end      
     end 
   ]]
 }
