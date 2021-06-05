@@ -3,6 +3,7 @@ Version: 1.9.0
 Date: ??. ??. 2021  
   Features:
     - Added Living With Biters by MangledPork Gaming.
+    - Added Franqly Any% Speedrun 1h 29h 43s
 ---------------------------------------------------------------------------------------------------
 Version: 1.8.2
 Date: 15. 5. 2021  
