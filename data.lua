@@ -167,6 +167,36 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
+main_menu_simulations.DrogiwanCannobi_josef = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/DrogiwanCannobi_josef.zip",
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+  init =
+  [[    
+    game.camera_position = {-256, -32}
+    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-310, -36.5}, -- position
+      {
+        "Drogiwan Cannobi",
+        "JOSEF",
+        "A Self-Expanding Factory",
+        "May 2021"
+      },  -- text to display
+      4.5,  -- text scale
+      20 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[]]
+}
+
 main_menu_simulations.franqly_any1h29m43s = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/franqly_any1h29m43s.zip",
