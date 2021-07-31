@@ -2,12 +2,14 @@
 Version: 1.9.1
 Date: 30. 07. 2021
   Features:
-    - Update by snouz
-    - New mod icon featuring 8 bases and a main menu imitation
+    - New mod thumbnail featuring 8 bases and a main menu imitation (snouze)
 
   Optimizations:
-    - Reduced mod size by 64.2% (81.9M to 29.3M)
-    - Removed failed dependancies
+    - Reduced mod size by 64.2% (81.9MB to 29.3MB) (snouze)
+    - Removed failed mod dependancies from simulations (snouz)
+
+  Bugfixes:
+    - Bentham Towns display box was too small.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.0
 Date: 06. 06. 2021
