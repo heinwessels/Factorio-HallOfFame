@@ -2,10 +2,10 @@
 Version: 1.9.1
 Date: 30. 07. 2021
   Features:
-    - New mod thumbnail featuring 8 bases and a main menu imitation (snouze #1)
+    - New mod thumbnail featuring 8 bases and a main menu imitation (snouz #1)
 
   Optimizations:
-    - Reduced mod size by roughly 65%. (snouze #1)
+    - Reduced mod size by roughly 65%. (snouz #1)
     - Removed failed mod dependancies from simulations (snouz #1)
 
   Bugfixes:
