@@ -39,7 +39,8 @@ Check out this trailer accompanied by beautiful Wintergatan music that showcases
 - [Quazarz_: Science River](https://www.reddit.com/r/factorio/comments/bjxai2/science_river_reloaded_an_endgame_scalable_lab/) [*2 May 2020 using Factorio 0.18*]. Beautiful science sushi belt river.
 - [MangledPork Gaming: Towns](https://www.youtube.com/playlist?list=PLOx2-nvzE_ZJWVrGsD044zkjyMyGPoPgF). [*July 2015 to September 2017 using Factorio 0.12 to 0.15*]. Bentham created a small town-based factory over a few versions of Factorio. 
 - [MangledPork Gaming: Living With Biters](https://www.youtube.com/playlist?list=PLOx2-nvzE_ZJXS1sQDUzWtvBLn9ZPyUXk). [*February 2015 to June 2016 using Factorio 0.12*]. A unique base where Bentham lived in harmony between the native biters by enabling peaceful mode. Unfortunately, in modern Factorio, this is no longer possible without them destroying your structures. 
-- Goose: Burner Inserter Megabase. Built in 0.17. A megabase using only burner inserters.
+- Goose: Burner Inserter Megabase. [*September 2019 using Factorio 0.17*]. A megabase using only burner inserters.
+- PIrusama: Symbiotic Utopia. [*July 2021 using Factorio 1.1*]. "It's sort of a symbiotic utopia that self-contains pollution. The biters wouldn't call it an utopia but, oh well."
 - [PM_ME_DELICIOUS_FOOD: BadBagel](https://www.reddit.com/r/factorio/comments/jl4gvh/you_guys_love_superspaghetti_so_as_promised_heres/). [*30 October 2020 using Factorio 1.0*]. Chaotic spaghetti base with creative and odd systems. Watch the trains and sushi belts.
 - [T-1024: Diagonal Madness](https://forums.factorio.com/viewtopic.php?f=204&t=59237). [*31 March 2018 using Factorio 0.16*] A base where everything is built diagonally.
 - [Griswold: Ant Farm](https://www.reddit.com/r/factorio/comments/76qzz8/1_rpm_antfarm_factory/). [*16 October 2017 using Factorio 0.15*] A buzzing factory that achieved 1 RPM using only small trains and no bots.

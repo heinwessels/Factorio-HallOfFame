@@ -167,6 +167,35 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
+main_menu_simulations.pirusama = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/pirusama.zip",
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+  init =
+  [[    
+    game.camera_position = {-1053, -283}
+    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-1022, -287}, -- position
+      {
+        "PIrusama",
+        "Symbiotic Utopia",
+        "July 2021"
+      },  -- text to display
+      4.5,  -- text scale
+      14 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[]]
+}
+
 main_menu_simulations.DrogiwanCannobi_josef = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/DrogiwanCannobi_josef.zip",
