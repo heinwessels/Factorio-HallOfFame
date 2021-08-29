@@ -2,6 +2,7 @@
 Version: 1.10.0
 Date: ?. ?. 2021
   Features:
+    - Added 40kSPM 60UPS by SteveTrov.
     - Added Symbiotic Utopia by PIrusama (thanks for the submission!)
     - Added Post Nauvis Collapse by Maelstrom.
 ---------------------------------------------------------------------------------------------------

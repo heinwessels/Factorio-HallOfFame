@@ -167,6 +167,35 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
+main_menu_simulations.Stevetrov_40kspm_60ups = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/Stevetrov_40kspm_60ups.zip",
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+  init =
+  [[    
+    game.camera_position = {-156, 1316}
+    game.camera_zoom = ]]..(zoom_modifier * 0.7)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-156-(8/2), 1316+13}, -- position
+      {
+        "SteveTrov",
+        "40 kSPM 60 UPS",
+        "26 May 2021"
+      },  -- text to display
+      2.7,  -- text scale
+      8 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[]]
+}
+
 main_menu_simulations.post_nauvis_collapse = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/post_nauvis_collapse.zip",

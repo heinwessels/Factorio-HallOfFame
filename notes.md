@@ -25,3 +25,9 @@ This does a lot:
 /c game.player.force.research_all_technologies()
 /c game.player.force.technologies["worker-robots-speed-6"].researched = true
 ```
+
+```
+/c for i=1,200 do
+    game.player.force.technologies["mining-productivity-4"].researched = true
+end
+```
