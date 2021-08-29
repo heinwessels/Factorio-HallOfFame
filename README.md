@@ -1,6 +1,6 @@
 # Hall of Fame - Menu Simulations
 
-Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and inspire even greater builds!
+Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and hopefully inspire even greater builds!
 
 Therefore, if you install this mod then this Hall of Fame will occasionally appear behind your main menu, showcasing the graceful movement of full belts, speeding robots and some rumbling rockets. They will run almost indefinitely, which also makes for an amazing *screensaver*!
 
@@ -37,6 +37,7 @@ Check out this trailer accompanied by beautiful Wintergatan music that showcases
 - [Horvenbeestinger: Beautiful Light Megabase](https://www.reddit.com/r/factorio/comments/izym9l/turning_on_the_factory_2500spm/). [*26 September 2020 using Factorio 1.0*]. Absolutely beautiful base, especially at night with the new lighting in Factorio 1.1.
 - [Gh0stP1rate and Hamiebarmund: 10k SPM 100% Vanilla Megabase](https://www.reddit.com/r/factorio/comments/jpwydq/10k_spm_100_vanilla_megabase/).  *[7 November 2020 using Factorio 1.0*]. One of the biggest true vanilla bases.
 - [Quazarz_: Science River](https://www.reddit.com/r/factorio/comments/bjxai2/science_river_reloaded_an_endgame_scalable_lab/) [*2 May 2020 using Factorio 0.18*]. Beautiful science sushi belt river.
+- [Maelstrom: Nauvis Post Collapse](https://forums.factorio.com/viewtopic.php?t=74597) [*16 August 2019 using Factorio 0.18*]. An enormous handcrafted map exploring the collapse of the Nauvis colony after it perished in the first AI war.
 - [MangledPork Gaming: Towns](https://www.youtube.com/playlist?list=PLOx2-nvzE_ZJWVrGsD044zkjyMyGPoPgF). [*July 2015 to September 2017 using Factorio 0.12 to 0.15*]. Bentham created a small town-based factory over a few versions of Factorio. 
 - [MangledPork Gaming: Living With Biters](https://www.youtube.com/playlist?list=PLOx2-nvzE_ZJXS1sQDUzWtvBLn9ZPyUXk). [*February 2015 to June 2016 using Factorio 0.12*]. A unique base where Bentham lived in harmony between the native biters by enabling peaceful mode. Unfortunately, in modern Factorio, this is no longer possible without them destroying your structures. 
 - Goose: Burner Inserter Megabase. [*September 2019 using Factorio 0.17*]. A megabase using only burner inserters.
@@ -48,14 +49,6 @@ Check out this trailer accompanied by beautiful Wintergatan music that showcases
 - [silverwyrm: The Gear Mk2](https://www.reddit.com/r/factorio/comments/iyl6in/the_gear_mk_2_now_with_100_more_gears/). [*24 September 2020 using Factorio 1.0*] After the community enjoyed his first [Gear Mall](https://www.reddit.com/r/factorio/comments/is3mxa/the_gear_a_mall/), silverwyrm expanded his creation and brought us The Gear Mk2!
 - [Kfitik: ≈12 kSPM Vanilla-ish](https://www.reddit.com/r/factorio/comments/jcbsxs/177gw_of_solar/). Started in Factorio 0.17, and runs at 7 UPS.
 
-### Available Settings
-There are settings to modify your viewing experience in the mod settings:
-- You can set *how long* each base will play in seconds. It starts with a default playtime of 2 minutes so that you have time to investigate the beautiful bases. These bases will run almost **indefinitely**, which means with longer durations it will create a beautiful screensaver.
-- *Vanilla simulations* are turned off by default, but it's advised to turn it back on after you enjoyed the Hall of Fame.
-- You can turn on *Alt-Mode*, which is off by default.
-- The sound of the simulations can be softer or louder using the *Volume Modifier*. Set it to `0` to mute.
-- Different resolution screens will display the simulations at different zoom levels. Adjust the *Zoom Modifier* if it doesn't fit nicely on your screen. Lower values for smaller screens, and higher for bigger screens. Default 1.
-
 ### Expanding the Hall of Fame
 The current Hall of Fame list is not complete, and there are still a lot of amazing bases that could be added. If you have any suggestions for new additions to the Hall of Fame, please mention them in the discussion. 
 
@@ -63,3 +56,8 @@ The current Hall of Fame list is not complete, and there are still a lot of amaz
 - I did not build any of the bases showcased. I'm simply compiling a list of memorable bases that other people built which are typically published on Reddit, YouTube or the Factorio Forums. If you do not like your base being showcased please let me know. 
 - Some bases' functionality might be modified slightly to work better as a menu simulation, while attempting to remain true to the aesthetics.
 - If you're using an overhaul mod (like Krastorio or Space Exploration) then some of the simulations will likely not work correctly.
+
+### Credits
+- [Snouz](https://mods.factorio.com/mod/MbrTestMod) for the beautiful thumbnail and helping reduce the mod file size.
+- Conor_ for the glorious [Mod Spotlight](https://alt-f4.blog/ALTF4-35/#mod-spotlight-hall-of-fame-conor_).
+- valneq for changing my thought into [a great idea](https://forums.factorio.com/viewtopic.php?p=520268#p520268).

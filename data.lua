@@ -167,6 +167,35 @@ end
 -- Now add all the simulations
 --------------------------------------------------------------------------
 
+main_menu_simulations.post_nauvis_collapse = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/post_nauvis_collapse.zip",
+  length = playtime,  
+  volume_modifier = settings.startup["hall-of-fame-volume-modifier"].value,
+  init =
+  [[        
+    game.camera_position = {-625, -1350}
+    game.camera_zoom = ]]..(zoom_modifier * 0.11)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-625-(60/2), -1350+85}, -- position
+      {
+        "Maelstrom",
+        "Nauvis Post Collapse",
+        "16 August 2019"
+      },  -- text to display
+      16,  -- text scale
+      60 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[]]
+}
+
 main_menu_simulations.pirusama = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/pirusama.zip",
