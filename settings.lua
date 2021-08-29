@@ -35,4 +35,10 @@ data:extend({
         minimum_value = 0.5,
         maximum_value = 2.0
     },
+    {
+        type = "bool-setting",
+        name = "hall-of-fame-mute-sound-driven",
+        setting_type = "startup",
+        default_value = false
+    },
 })
