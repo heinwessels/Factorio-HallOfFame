@@ -1,11 +1,11 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.1
-Date: 29. 10. 2021
+Date: 29. 08. 2021
   Changes:
     - Nauvis Post Collapse is no longer super loud (thanks steamdwarfjr!)
 ---------------------------------------------------------------------------------------------------
 Version: 1.10.0
-Date: 29. 10. 2021
+Date: 29. 08. 2021
   Features:
     - Added Daft Punk by Tritex989.
     - Added 40kSPM 60UPS by SteveTrov.
