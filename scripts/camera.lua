@@ -6,28 +6,31 @@ local camera = {}
 -- Call this to initialize your camera_waypoints
 -- see camera.poll for the contents on camera_waypoints
 function camera.init(waypoints)
+    waypoints[1].start_tick = waypoints[1].start_tick or 0
     for i, waypoint in pairs(waypoints) do
-        waypoints[i].start_position = waypoint.start_position or (i > 1 and waypoints[i-1].end_position)
-        waypoints[i].start_tick = waypoint.start_tick or (i > 1 and waypoints[i-1].end_tick) or 0
-        waypoints[i].start_zoom = waypoint.start_zoom or (i > 1 and waypoints[i-1].end_tick) or waypoint.end_zoom
-    end
-    
+        waypoint.start_position = waypoints[i].start_position or waypoints[i-1].end_position
+        waypoint.start_tick = waypoint.start_tick or waypoints[i-1].end_tick or 0
+        waypoint.start_zoom = waypoint.start_zoom or waypoints[i-1].end_zoom or waypoint.end_zoom
+        waypoint.end_zoom = waypoint.end_zoom or waypoint.start_zoom
+    end    
     return [[
-        if not interpolate then interpolate = function (a, b, x) return a + x * (b - a) end end
-        camera = {
-            waypoints = ]]..serpent.line(waypoints)..[[,
-            start_tick = game.tick,
-            zoom_modifier = ]]..settings.startup["hall-of-fame-zoom-modifier"].value..[[,
-            interpolate = function(waypoint, factor)                
-                return {
-                    position = {
-                        x = interpolate(waypoint.start_position.x, waypoint.end_position.x, factor),
-                        y = interpolate(waypoint.start_position.y, waypoint.end_position.y, factor),
-                    },
-                    zoom = waypoint.end_zoom and interpolate(waypoint.start_zoom, waypoint.end_zoom, factor) or nil,
-                }
-            end,
-        }
+        do
+            if not interpolate then interpolate = function (a, b, x) return a + x * (b - a) end end            
+            camera = {
+                waypoints = load([=[]]..serpent.dump(waypoints)..[[]=])(),
+                start_tick = game.tick,
+                zoom_modifier = ]]..settings.startup["hall-of-fame-zoom-modifier"].value..[[,
+                interpolate = function(waypoint, factor)                
+                    return {
+                        position = {
+                            x = interpolate(waypoint.start_position.x, waypoint.end_position.x, factor),
+                            y = interpolate(waypoint.start_position.y, waypoint.end_position.y, factor),
+                        },
+                        zoom = waypoint.end_zoom and interpolate(waypoint.start_zoom, waypoint.end_zoom, factor) or nil,
+                    }
+                end,
+            }
+        end
     ]]
 end
 

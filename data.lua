@@ -249,7 +249,7 @@ main_menu_simulations.post_nauvis_collapse = {
   init =
   [[        
     game.camera_position = {-625, -1350}
-    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
+    game.camera_zoom = ]]..(zoom_modifier * 0.11)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
@@ -268,11 +268,21 @@ main_menu_simulations.post_nauvis_collapse = {
     
     ]]..camera.init{
       {
-        start_position = {x=-815+30, y=-1348},
-        end_position = {x=-714+30, y=-1464},
+        start_position = {x=-815+50, y=-1348},
+        end_position = {x=-714+50, y=-1444},
         end_tick = 20*60,
-        start_zoom = 0.3,
+        start_zoom = 0.2,
         end_zoom = 0.4
+      },
+      {        
+        end_position = {x=-714+150, y=-1444},
+        end_tick = 40*60,
+        end_zoom = 0.4
+      },
+      {        
+        end_position = {x=-625, y=-1350},
+        end_tick = 50*60,
+        end_zoom = 0.13
       },
     }..[[
     ]]..character_ai.init{
@@ -280,10 +290,14 @@ main_menu_simulations.post_nauvis_collapse = {
       start_position = {x=-815, y=-1348},
       waypoints = {
         {          
-          end_position = {x=-714, y=-1464},          
+          end_position = {x=-714, y=-1464},
+        },
+        {          
+          end_position = {x=-714+300, y=-1464},
         },
       }
     }..[[
+
     script.on_event(defines.events.on_tick, function()        
       ]]..camera.tick()..[[
       ]]..character_ai.tick()..[[

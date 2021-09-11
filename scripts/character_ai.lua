@@ -14,7 +14,8 @@ function character.init(ctx)
     return [[
         if not interpolate then interpolate = function (a, b, x) return a + x * (b - a) end end        
         if not character_ai then character_ai = {
-            characters = { },
+            characters = { },            
+            start_tick = game.tick,
             api = {
                 create_character = function (ctx)                    
                     return game.surfaces[1].create_entity{
@@ -59,9 +60,8 @@ function character.init(ctx)
             },
         } end
         character_ai.characters.]]..ctx.name..[[ = {
-            waypoints = ]]..serpent.line(ctx.waypoints)..[[,
+            waypoints = load([=[]]..serpent.dump(ctx.waypoints)..[[]=])(),
             current_waypoint = 1,
-            start_tick = game.tick,
             entity = character_ai.api.create_character{position={]]..ctx.start_position.x..[[,]]..ctx.start_position.y..[[}},
         }
     ]]
@@ -72,7 +72,7 @@ function character.tick()
         do
             for name, ai in pairs(character_ai.characters) do
 
-                local tick = game.tick - camera.start_tick
+                local tick = game.tick - character_ai.start_tick
                 local api = character_ai.api
                 local character = ai.entity
 
