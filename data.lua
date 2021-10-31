@@ -176,6 +176,35 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.root_breakthegame = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/root_breakthegame.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {-329, -375}
+    game.camera_zoom = ]]..(zoom_modifier * 0.4)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {-329-6, -375+25}, -- position
+      {
+        "RootNegative",
+        "Break The Game",
+        "2 January 2016"
+      },  -- text to display
+      4,  -- text scale
+      12 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[]]
+}
+
 main_menu_simulations.DaftPunk = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/DaftPunk.zip",
