@@ -37,6 +37,7 @@ Check out this trailer accompanied by beautiful Wintergatan music that showcases
 - [Soelless Gaming (P0ober): Beautiful Megabase](https://www.youtube.com/watch?v=jjtXHsv5E6M&ab_channel=SoellessGaming). [*31 October 2017 using Factorio 0.15*]. Beautiful belts in a city-block pattern.
 - [Valkhiya: Beehive](https://www.reddit.com/r/factorio/comments/clxal5/the_beehive_135kspm_megabase_with_11_trains/). [*4 August 2019 using Factorio 0.17*]. A beautiful megabase producing 1.35 kSPM built in a hexagonal grid. The beautiful lights next to the rails are inspired by Zisteau's [Recursion Recursion](https://www.youtube.com/playlist?list=PLVPJ1jbg0CaEmsyyTMXc6k9UAvJEHMITh) series' [Rainbow Roads](https://youtu.be/-WhDtg-6_b4?t=96).
 - [Horvenbeestinger: Beautiful Light Megabase](https://www.reddit.com/r/factorio/comments/izym9l/turning_on_the_factory_2500spm/). [*26 September 2020 using Factorio 1.0*]. Absolutely beautiful base, especially at night with the new lighting in Factorio 1.1.
+- [dentoid: Sushi Loop](https://www.reddit.com/r/factorio/comments/qa2th1/dont_you_just_appreciate_it_when_you_get_off_your/). [*17 October 2021 using Factorio 1.1*]. A beautiful and functional sushi belt driven factory. It was originally built using cheaper recipe's so it's running slower than seen on the reddit post.
 - [Gh0stP1rate and Hamiebarmund: 10k SPM 100% Vanilla Megabase](https://www.reddit.com/r/factorio/comments/jpwydq/10k_spm_100_vanilla_megabase/).  *[7 November 2020 using Factorio 1.0*]. One of the biggest true vanilla bases.
 - [Quazarz_: Science River](https://www.reddit.com/r/factorio/comments/bjxai2/science_river_reloaded_an_endgame_scalable_lab/) [*2 May 2020 using Factorio 0.18*]. Beautiful science sushi belt river.
 - [Maelstrom: Nauvis Post Collapse](https://forums.factorio.com/viewtopic.php?t=74597) [*16 August 2019 using Factorio 0.18*]. An enormous handcrafted map exploring the collapse of the Nauvis colony after it perished in the first AI war.
@@ -61,6 +62,7 @@ The current Hall of Fame list is not complete, and there are still a lot of amaz
 - If you're using an overhaul mod (like Krastorio or Space Exploration) then some of the simulations will likely not work correctly.
 
 ### Credits
+- All the players that allow me to showcase their beautiful creations.
 - [Snouz](https://mods.factorio.com/mod/MbrTestMod) for the beautiful thumbnail and helping reduce the mod file size.
 - Conor_ for the glorious [Mod Spotlight](https://alt-f4.blog/ALTF4-35/#mod-spotlight-hall-of-fame-conor_).
 - valneq for changing my thought into [a great idea](https://forums.factorio.com/viewtopic.php?p=520268#p520268).

@@ -176,6 +176,37 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.dentoid_sushiloop = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/dentoid_sushiloop.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {740, -1463}
+    game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {757, -1451}, -- position
+      {
+        "dentoid",
+        "Sushi Loop",
+        "17 October 2021"
+      },  -- text to display
+      2.5,  -- text scale
+      8 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[
+
+  ]]
+}
+
 main_menu_simulations.root_breakthegame = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/root_breakthegame.zip",

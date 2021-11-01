@@ -3,6 +3,7 @@ Version: 1.10.2
 Date: ??. ??. 2021
   Features:
     - Added Break The Game by RootNegative
+    - Added Sushi Loop by dentoid
   Changes:
     - Nauvis Post Collapse now has cool camera movements.
 ---------------------------------------------------------------------------------------------------
