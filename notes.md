@@ -3,7 +3,7 @@
 game.player.force.cancel_charting(surface)
 px = game.player.position.x/32
 py = game.player.position.y/32
-sx = 15
+sx = 20
 sy = 15
 for chunk in surface.get_chunks() do
     if (chunk.x-px) < -sx/2 or (chunk.x-px) >= sx/2 or

@@ -176,6 +176,37 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.arrowgluteus_trainclock = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/arrowgluteus_trainclock.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {247, -43}
+    game.camera_zoom = ]]..(zoom_modifier * 0.3)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. draw_label_code(
+      {247-16, -43+32}, -- position
+      {
+        "arrow in my gluteus maximus",
+        "Real Time Train Clock",
+        "24 April 2017"
+      },  -- text to display
+      6,  -- text scale
+      32 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[
+
+  ]]
+}
+
 main_menu_simulations.dentoid_sushiloop = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/dentoid_sushiloop.zip",
