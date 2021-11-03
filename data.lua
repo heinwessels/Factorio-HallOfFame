@@ -1,3 +1,5 @@
+local hof = require("scripts.hof")
+
 -- Get the menu simulations
 local main_menu_simulations = data.raw["utility-constants"]["default"].main_menu_simulations
 
@@ -45,105 +47,6 @@ function get_volume_modifier(ctx)
     or settings.startup["hall-of-fame-volume-modifier"].value
 end
 
--- Create a function that will create code to draw the text boxes
-function draw_label_code(position, text, text_scale, rect_width, overwrite_header)
-  -- overwrite_header: '' to disable, 'something_else' to display 'something_else'
-  
-  -- The code that we will generate to draw the label
-  code = "" 
-
-  -- Constants
-  local header_scale = 0.65                 -- Relative to text size
-  local spacing_factor = 0.4                -- Vertical spacing between text (multiplied by text scale)
-  local rect_pad = {0.3, 0}               -- Padding between text and rectangle corner
-  local border_factor = {0.1, 0.1}          -- Factor to scale border width by (multiplied by text scale)
-
-  local colour_text = {r=204,g=102,b=0}         -- Colour of main text
-  local colour_text_hof = {r=200,g=180,b=150}   -- Colour of the Hall of Fame text
-  local colour_rect_out = {r=35,g=35,b=35}      -- Colour of the outer rectangle
-  local colour_rect_in = {r=48,g=48,b=48}      -- Colour of the inner rectangle
-
-  -- Variables  
-  local border_width = {border_factor[1]*text_scale, border_factor[2]*text_scale}
-  local spacing = {0, spacing_factor*text_scale}
-  local header = 'Hall of Fame'
-  if overwrite_header == '' then 
-    header = nil 
-  elseif overwrite_header ~= nil then
-    header = overwrite_header
-  end
-  local num_of_lines = #text
-  if header ~= nil then num_of_lines = num_of_lines + 0.5 end
-
-  -- Draw outer rectangle
-  code = code .. [[
-    rendering.draw_rectangle{
-      color={]]..colour_rect_out.r..[[,]]..colour_rect_out.g..[[,]]..colour_rect_out.b..[[},      
-      filled=true,
-      left_top = {
-        ]]..position[1]-rect_pad[1]-border_width[1]..[[,
-        ]]..position[2]-rect_pad[2]-border_width[2]..[[
-      },
-      right_bottom = {
-        ]]..position[1] + rect_width + rect_pad[1] + border_width[1]..[[,
-        ]]..position[2] + rect_pad[2] + (num_of_lines+header_scale)*spacing[2] + border_width[2]..[[
-      },
-      surface = game.surfaces.nauvis
-    }
-
-    -- Draw inner rectangle
-    rendering.draw_rectangle{
-      color={]]..colour_rect_in.r..[[,]]..colour_rect_in.g..[[,]]..colour_rect_in.b..[[},
-      filled=true,
-      left_top = {]]..position[1]-rect_pad[1]..[[,]]..position[2]-rect_pad[2]..[[},
-      right_bottom = {
-        ]]..position[1] + rect_width + rect_pad[1]..[[,
-        ]]..position[2] + rect_pad[2] + (num_of_lines + header_scale) * spacing[2]..[[
-      },
-      surface = game.surfaces.nauvis
-    }
-  ]]
-
-  -- Draw the Hall of Fame label
-  local current_pos = position
-
-  if header ~= nil then
-    code = code .. [[
-      rendering.draw_text{
-        text="]]..header..[[", 
-        surface=game.surfaces.nauvis, 
-        target={]]..current_pos[1]..[[,]]..current_pos[2]..[[},
-        color={]]..colour_text_hof.r..[[,]]..colour_text_hof.g..[[,]]..colour_text_hof.b..[[}, 
-        scale=]]..text_scale*header_scale..[[
-      }
-    ]]
-
-    -- Update the 'cursor' after the heading
-    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]*header_scale}
-  end
-
-  -- Draw the text
-  for _, snippet in ipairs(text) do
-
-    -- Now generate the code    
-    code = code .. [[
-      rendering.draw_text{
-        text="]]..snippet..[[",
-        surface=game.surfaces.nauvis, 
-        target={]]..current_pos[1]..[[,]]..current_pos[2]..[[},
-        color={]]..colour_text.r..[[,]]..colour_text.g..[[,]]..colour_text.b..[[}, 
-        scale=]]..text_scale..[[
-      }
-    ]]
-    
-    -- Update the 'cursor'
-    current_pos = {current_pos[1]+spacing[1], current_pos[2]+spacing[2]}
-  end
-
-  return code
-
-end
-
 function keep_entity_filled_at(position, type, items, every)
   -- Returns a code snippet that will keep the entity at shown position
   -- filled with some items. <items> is an list of <ItemStack>. It will
@@ -176,7 +79,88 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
-main_menu_simulations.arrowgluteus_trainclock = {
+main_menu_simulations.aaronlecon_smeltery_emporium = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/aaronlecon_smeltery_emporium.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {139, 63}
+    game.camera_zoom = ]]..(zoom_modifier * 0.9)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {139-5, 63+10}, -- position
+      {
+        "Aaron Lecon",
+        "The Smeltery Emporium",
+        "26 September 2021"
+      },  -- text to display
+      2.2,  -- text scale
+      10 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[
+
+  ]]
+}
+
+
+main_menu_simulations.gotyoke_tas = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/gotyoke_tas.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {0, 0}
+    game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+    
+    -- Remember this simulation has HEAVY scripting
+    -- in the scenario. Don't do weird things here.
+
+    local player_offset = {x = 18, y = 0}
+    local emblem_offset = {x = 18 - 7, y = -3}
+
+    script.on_nth_tick(1, function()
+      -- Cannot overwrite 'on_tick' because that overwrites scenario's 'on_tick' for some reason
+
+      -- Update the camera position
+      local player = game.connected_players[1]      
+      game.camera_position = {player.position.x + player_offset.x, player.position.y + player_offset.y}  
+
+      -- Update the emblem position
+      local emblem_location = {
+        x = game.camera_position.x + emblem_offset.x,
+        y = game.camera_position.y + emblem_offset.y
+      }
+        
+      ]] .. hof.draw_label_code_runtime(
+        "emblem_location", -- position name of variable
+        {
+          "Gotyoke",
+          "Tool-Assisted Speedrun (TAS)",
+          "Any%: 1h 21m 20s",
+          "24 April 2017"
+        },  -- text to display
+        2.5,  -- text scale
+        14 -- rectangle width
+      ) .. [[
+    end)
+    ]],
+    update = [[ ]]
+  }  
+  
+  main_menu_simulations.arrowgluteus_trainclock = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/arrowgluteus_trainclock.zip",
   length = playtime,  
@@ -190,7 +174,7 @@ main_menu_simulations.arrowgluteus_trainclock = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {247-16, -43+32}, -- position
       {
         "arrow in my gluteus maximus",
@@ -221,7 +205,7 @@ main_menu_simulations.dentoid_sushiloop = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {757, -1451}, -- position
       {
         "dentoid",
@@ -252,7 +236,7 @@ main_menu_simulations.root_breakthegame = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-329-6, -375+25}, -- position
       {
         "RootNegative",
@@ -281,7 +265,7 @@ main_menu_simulations.DaftPunk = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {85-(18/2), -60+25}, -- position
       {
         "Tritex989",
@@ -317,7 +301,7 @@ main_menu_simulations.Stevetrov_40kspm_60ups = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-156-(8/2), 1316+13}, -- position
       {
         "SteveTrov",
@@ -346,7 +330,7 @@ main_menu_simulations.post_nauvis_collapse = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-625-(60/2), -1350+85}, -- position
       {
         "Maelstrom",
@@ -415,7 +399,7 @@ main_menu_simulations.pirusama = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-1022, -287}, -- position
       {
         "PIrusama",
@@ -444,7 +428,7 @@ main_menu_simulations.DrogiwanCannobi_josef = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-310, -36.5}, -- position
       {
         "Drogiwan Cannobi",
@@ -474,7 +458,7 @@ main_menu_simulations.franqly_any1h29m43s = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {50, 86}, -- position
       {
         "Franqly",        
@@ -504,7 +488,7 @@ main_menu_simulations.Stevetrov_monolithic_train_10k = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-62, -560}, -- position
       {
         "SteveTrov",        
@@ -533,7 +517,7 @@ main_menu_simulations.Valkhiya_Beehive = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {608.5, 186}, -- position
       {
         "Valkhiya",        
@@ -561,7 +545,7 @@ main_menu_simulations.rain9441_defaultfirstbots = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {210, -82.5}, -- position
       {
         "Rain9441",        
@@ -625,7 +609,7 @@ main_menu_simulations.V453000_GridLock = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-198, 121}, -- position
       {
         "V453000",        
@@ -661,7 +645,7 @@ main_menu_simulations.antielitz_any15815 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-33, 100}, -- position
       {
         "AntiElitz",        
@@ -692,7 +676,7 @@ main_menu_simulations.wube_11_officemap = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-471, 475}, -- position
       {
         "Wube",        
@@ -722,7 +706,7 @@ main_menu_simulations.nefrums_13857 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {9.5, 199.5}, -- position
       {
         "Nefrums",
@@ -753,7 +737,7 @@ main_menu_simulations.flame_Sla_30x1000spm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {599.5, -16.5}, -- position
       {
         "flame_Sla",
@@ -788,7 +772,7 @@ main_menu_simulations.mangledpork_livingwithbiters = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {330, -75}, -- position
       {
         "MangledPork (Bentham)",
@@ -827,7 +811,7 @@ main_menu_simulations.mangledpork_towns = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-144, 506}, -- position
       {
         "MangledPork (Bentham)",
@@ -862,7 +846,7 @@ main_menu_simulations.silverwyrm_gear_mk2 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-90, 287}, -- position
       {
         "silverwyrm",
@@ -892,7 +876,7 @@ main_menu_simulations.zisteau_meiosis = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-837, 29}, -- position
       {
         "Zisteau",
@@ -923,7 +907,7 @@ main_menu_simulations.Ellipticality_logistic_distribution = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-130, -58204}, -- position
       {
         "Ellipticality",
@@ -953,7 +937,7 @@ main_menu_simulations.griswold_ant_farm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-897, -992}, -- position
       {
         "Griswold",
@@ -983,7 +967,7 @@ main_menu_simulations.niftymaniac_greygoo1 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {55, -115}, -- position
       {
         "NiftyManiac",
@@ -1014,7 +998,7 @@ main_menu_simulations.t1024_diag = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-162, 15}, -- position
       {
         "T-1024",
@@ -1044,7 +1028,7 @@ main_menu_simulations.stevetrov_15rpm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {1567, 1389.5}, -- position
       {
         "SteveTrov",
@@ -1074,7 +1058,7 @@ main_menu_simulations.xterminator_ssts = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-1956, -820}, -- position
       {
         "Xterminator",
@@ -1104,7 +1088,7 @@ main_menu_simulations.challenge_32x32 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-48, -64}, -- position
       {
         "One Chunk Factory Challenge",
@@ -1115,7 +1099,7 @@ main_menu_simulations.challenge_32x32 = {
       13 -- rectangle width
     ) .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-72, -63.5}, -- position
       {
         "acmemyst",
@@ -1126,7 +1110,7 @@ main_menu_simulations.challenge_32x32 = {
       '1st' -- overwrite header
     ) .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-18, -63.5}, -- position
       {
         "ostertoasterii",
@@ -1156,7 +1140,7 @@ main_menu_simulations.kos_mmo_202001 = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {445, -588}, -- position
       {
         "KatherineOfSky and Caledorn",
@@ -1187,7 +1171,7 @@ main_menu_simulations.PM_ME_DELICIOUS_FOOD_bagel = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {135, -77}, -- position
       {
         "PM_ME_DELICIOUS_FOOD",
@@ -1217,7 +1201,7 @@ main_menu_simulations.goose_Burner_inserter_megabase = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {1504, 1263}, -- position
       {
         "Goose",
@@ -1247,7 +1231,7 @@ main_menu_simulations.Quazarz_science_rivier = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {79, -180}, -- position
       {
         "Quazarz_",
@@ -1277,7 +1261,7 @@ main_menu_simulations.soelless_gaming_beautiful = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {36, -7}, -- position
       {
         "Soelless Gaming",
@@ -1307,7 +1291,7 @@ main_menu_simulations.kfitik_14kpms = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {3115.5, 1307}, -- position
       {
         "Kfitik",
@@ -1337,7 +1321,7 @@ main_menu_simulations.Gh0stP1rate_vanilla_10kspm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {950, 670}, -- position
       {
         "Gh0stP1rate and Hamiebarmund",
@@ -1367,7 +1351,7 @@ main_menu_simulations.p0ober_jdplays_spaghetti_world = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-50, -259}, -- position
       {
         "P0ober & JD-Plays",
@@ -1397,7 +1381,7 @@ main_menu_simulations.accidentalchef_10rpm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-176.5, 603}, -- position
       {
         "AccidentalChef",
@@ -1427,7 +1411,7 @@ main_menu_simulations.swolar_20kspm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {354, -411}, -- position
       {
         "swolar",
@@ -1457,7 +1441,7 @@ main_menu_simulations.horvenbeestinger_2500spm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {1660, 142}, -- position
       {
         "Horvenbeestinger",
@@ -1487,7 +1471,7 @@ main_menu_simulations.lilyrose_beltmegabase = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-97.5, 18}, -- position
       {
         "Lily Rose",
@@ -1517,7 +1501,7 @@ main_menu_simulations.davemcw_1rdpm = {
 
     ]] .. alt_info .. [[
 
-    ]] .. draw_label_code(
+    ]] .. hof.draw_label_code(
       {-188.5, -322}, -- position
       {
         "DaveMcW",

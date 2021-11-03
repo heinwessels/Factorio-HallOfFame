@@ -5,6 +5,8 @@ Date: ??. ??. 2021
     - Added Break The Game by RootNegative
     - Added Sushi Loop by dentoid
     - Added Train Clock by arrow in my gluteus maximus
+    - Added (probably only) TAS Any% Speedrun by Gotyoke.
+    - Added Smeltery Emporium by Aaron Lecon.
   Changes:
     - Nauvis Post Collapse now has cool camera movements.
 ---------------------------------------------------------------------------------------------------
