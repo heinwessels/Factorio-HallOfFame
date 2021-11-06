@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.10.2
-Date: ??. ??. 2021
+Version: 1.11.0
+Date: 06. 10. 2021
   Features:
     - Added Break The Game by RootNegative
     - Added Sushi Loop by dentoid
