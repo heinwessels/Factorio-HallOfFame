@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.11.1
+Date: 23. 11. 2021  
+  Changes:
+    - Moving camera disabled by default to create a more pleasant viewing experience (Thanks asfoitio!).
+---------------------------------------------------------------------------------------------------
 Version: 1.11.0
 Date: 06. 10. 2021
   Features:

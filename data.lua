@@ -111,30 +111,44 @@ main_menu_simulations.aaronlecon_smeltery_emporium = {
 }
 
 main_menu_simulations.gotyoke_tas = {
-  checkboard = false,
+  checkboard = false,  
   save = "__HallOfFame__/menu-simulations/gotyoke_tas.zip",
   length = playtime,  
   volume_modifier = get_volume_modifier{},
   init =
   [[    
-    game.camera_position = {0, 0}
-    game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
+    game.camera_position = {-40, 145}
+    game.camera_zoom = ]]..(zoom_modifier * 0.7)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 1
 
     ]] .. alt_info .. [[
     
+    ]] .. hof.draw_label_code(
+      {-25, 142}, -- position name of variable
+      {
+        "Gotyoke",
+        "Tool-Assisted Speedrun (TAS)",
+        "Any%: 1h 21m 20s",
+        "24 April 2017"
+      },  -- text to display
+      2.5,  -- text scale
+      14 -- rectangle width
+    ) .. [[
+
     -- Remember this simulation has HEAVY scripting
     -- in the scenario. Don't do weird things here.
 
     local player_offset = {x = 18, y = 0}
     local emblem_offset = {x = 18 - 7, y = -3}
-
+    
+    ]]..(settings.startup["hall-of-fame-moving-camera"].value and ([[
     script.on_nth_tick(1, function()
       -- Cannot overwrite 'on_tick' because that overwrites scenario's 'on_tick' for some reason
 
       -- Update the camera position
-      local player = game.connected_players[1]      
+      local player = game.connected_players[1]
+      game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
       game.camera_position = {player.position.x + player_offset.x, player.position.y + player_offset.y}  
 
       -- Update the emblem position
@@ -154,8 +168,7 @@ main_menu_simulations.gotyoke_tas = {
         2.5,  -- text scale
         14 -- rectangle width
       ) .. [[
-    end)
-    ]],
+    end) ]]) or [[]]),
     update = [[ ]]
   }  
   
@@ -376,10 +389,11 @@ main_menu_simulations.post_nauvis_collapse = {
     }..[[
 
     script.on_event(defines.events.on_tick, function()        
-      ]]..camera.tick()..[[
+      ]]..(settings.startup["hall-of-fame-moving-camera"].value and ([[
+        ]]..camera.tick()..[[
+      ]]) or [[]])..[[
       ]]..character_ai.tick()..[[
     end)
-
   ]],
   update = [[]]
 }
