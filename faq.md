@@ -22,6 +22,7 @@ There are a few things you can customize on how the simulations play:
 - You can set *how long* each base will play in seconds. It starts with a default playtime of 2 minutes so that you have time to investigate the beautiful bases. These bases can run almost **indefinitely**, which means with longer durations it will create a beautiful screensaver.
 - You can turn on *Alt-Mode*, which is off by default.
 - The volume of the simulations can be adjusted using the *Volume Modifier*. Set it to `0` to mute.
+- There's an options to enable *simulations with Moving camera* which will allow a few simulations to move the camera, such as the Gotyoke TAS Speedrun and Nauvis Post Collapse. This is disabled by default since it could be uncomfortable for the background to move while working in the menu.
 - It's possible to mute the sound-driven simulations using the *Mute Sound-Driven Simulations* setting. These simulations' sounds might be disruptive to your music, and can therefore be specifically muted.
 - Different resolution screens will display the simulations at different zoom levels. Adjust the *Zoom Modifier* if it doesn't fit nicely on your screen. Lower values for smaller screens, and higher for bigger screens. Default 1.
 - *Vanilla simulations* are turned off by default, but it's advised to turn it back on after you enjoyed the Hall of Fame.
