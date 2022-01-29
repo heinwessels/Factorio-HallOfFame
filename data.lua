@@ -79,6 +79,41 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.trailer_2014 = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/trailer_2014.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {-26, -47}
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {3, -70}, -- position
+      {
+        "Factorio Trailer 2014",
+        "Wube",
+        "1 May 2014"
+      },  -- text to display
+      4,  -- text scale
+      17 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[
+    -- Ensure the tank technology is always being researched to keep the labs going.
+    if game.forces[1].technologies['inserter-capacity-bonus-5'].researched == true then
+      game.forces[1].technologies['inserter-capacity-bonus-5'].researched = false
+      game.forces[1].add_research('inserter-capacity-bonus-5')
+    end
+  ]]
+}
+
 main_menu_simulations.aaronlecon_smeltery_emporium = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/aaronlecon_smeltery_emporium.zip",
