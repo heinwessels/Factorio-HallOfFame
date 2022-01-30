@@ -898,7 +898,7 @@ main_menu_simulations.mangledpork_towns = {
         "27 July 2015"
       },  -- text to display
       4,  -- text scale
-      16 -- rectangle width
+      17 -- rectangle width
     ) .. [[
   ]], 
   update =

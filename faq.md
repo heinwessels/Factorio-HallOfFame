@@ -19,7 +19,7 @@ If you have a high resolution screen or a wide screen it's possible that you see
 ## What settings are available?
 
 There are a few things you can customize on how the simulations play:
-- You can set *how long* each base will play in seconds. It starts with a default playtime of 2 minutes so that you have time to investigate the beautiful bases. These bases can run almost **indefinitely**, which means with longer durations it will create a beautiful screensaver.
+- You can set *how long* each base will play in seconds. It starts with a default playtime of 1m 12 minutes to align with the intro song, and that you have time to investigate the beautiful bases. These bases can run almost **indefinitely**, which means with longer durations it can create a beautiful screensaver.
 - You can turn on *Alt-Mode*, which is off by default.
 - The volume of the simulations can be adjusted using the *Volume Modifier*. Set it to `0` to mute.
 - There's an options to enable *simulations with Moving camera* which will allow a few simulations to move the camera, such as the Gotyoke TAS Speedrun and Nauvis Post Collapse. This is disabled by default since it could be uncomfortable for the background to move while working in the menu.
