@@ -4,7 +4,7 @@ data:extend({
         name = "hall-of-fame-playback-time",                   
         setting_type = "startup",
         order = "m",
-        default_value = 120,
+        default_value = 141,    -- Set to be a long as the intro song
         minimum_value = 1,
         maximum_value = 10000
     },
