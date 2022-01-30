@@ -79,6 +79,37 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.warger_100P_5_26_46 = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/warger_100P_5_26_46.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {-8, 826.5}
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {10, 826.5 - 4}, -- position
+      {
+        "Warger",        
+        "Speedrun 100% Factorio 1.1",
+        "World Record: 5h 26m 46s",
+        "22 January 2022"
+      },  -- text to display
+      3.5,  -- text scale
+      17 -- rectangle width
+    ) .. [[
+
+  ]],
+  update = [[
+  ]]
+}
+
 main_menu_simulations.trailer_2014 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/trailer_2014.zip",

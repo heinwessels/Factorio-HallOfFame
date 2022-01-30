@@ -3,6 +3,7 @@ Version: 1.12.0
 Date: 30. 01. 2022
   Features:
     - Added Factorio Trailer Map 2014 by Wube.
+    - Added Warger 100% Speedrun 5h 26m 46s.
 ---------------------------------------------------------------------------------------------------
 Version: 1.11.1
 Date: 23. 11. 2021  
