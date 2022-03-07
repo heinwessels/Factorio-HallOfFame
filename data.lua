@@ -79,6 +79,48 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.bbc_baguette_vs_steelaxe = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/bbc_baguette_vs_steelaxe.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {8.5, -71.5}
+    game.camera_zoom = ]]..(zoom_modifier * 0.75)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {-22, -85}, -- position
+      {
+        "Biter Battle Championships",        
+        "Aftermath of Season 1's Longest Match",
+        "Baguette vs. SteelAxe (Victor)",
+        "6 February 2022"
+      },  -- text to display
+      2.5,  -- text scale
+      17.5 -- rectangle width
+    ) .. [[
+
+    
+    for _, unit in pairs(game.surfaces.nauvis.find_entities_filtered{
+      type = "unit"
+    }) do
+      unit.set_command{
+        type = defines.command.wander, 
+        radius = 50, 
+        distraction = defines.distraction.none
+      }
+      unit.active = true
+    end
+  ]],
+  update = [[
+  ]]
+}
+
 main_menu_simulations.warger_100P_5_26_46 = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/warger_100P_5_26_46.zip",
