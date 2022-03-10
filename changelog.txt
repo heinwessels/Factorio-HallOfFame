@@ -1,8 +1,9 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.13.0
-Date: 30. 03. 2022
+Date: 10. 03. 2022
   Features:
     - Added Biter Battle Championships Season 1's Baguette vs SteelAxe
+    - Added Twitch Plays Factorio by FearThePenguin
   Bugfixes:
     - Fixed spelling mistake in settings.
 ---------------------------------------------------------------------------------------------------

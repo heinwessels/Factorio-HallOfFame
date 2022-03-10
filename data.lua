@@ -79,6 +79,36 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.twitch_plays_factorio = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/twitch_plays_factorio.zip",
+  length = playtime,  
+  volume_modifier = get_volume_modifier{},
+  isolate = true,
+  init =
+  [[    
+    game.camera_position = {128, -187}
+    game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 0.5
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {95.5, -185}, -- position
+      {
+        "Twitch Plays Factorio",
+        "FearThePenguin",
+        "14 February 2022"
+      },  -- text to display
+      2.5,  -- text scale
+      9.5 -- rectangle width
+    ) .. [[
+  ]],
+  update = [[
+  ]]
+}
+
 main_menu_simulations.bbc_baguette_vs_steelaxe = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/bbc_baguette_vs_steelaxe.zip",
