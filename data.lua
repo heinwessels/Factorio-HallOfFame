@@ -84,10 +84,9 @@ main_menu_simulations.twitch_plays_factorio = {
   save = "__HallOfFame__/menu-simulations/twitch_plays_factorio.zip",
   length = playtime,  
   volume_modifier = get_volume_modifier{},
-  isolate = true,
   init =
   [[    
-    game.camera_position = {128, -187}
+    game.camera_position = {125, -187}
     game.camera_zoom = ]]..(zoom_modifier * 0.8)..[[
     game.tick_paused = false
     game.surfaces.nauvis.daytime = 0.5
