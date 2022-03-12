@@ -6,6 +6,8 @@ Date: 12. 03. 2022
     - Added Twitch Plays Factorio by FearThePenguin
   Bugfixes:
     - Fixed spelling mistake in settings.
+  Optimizations:
+    - Optimized some save files by removing preview images.
 ---------------------------------------------------------------------------------------------------
 Version: 1.12.0
 Date: 30. 01. 2022
