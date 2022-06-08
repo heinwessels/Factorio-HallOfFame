@@ -79,6 +79,35 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.mojod_3200k = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/mojod_3200k.zip",
+  length = playtime,
+  volume_modifier = get_volume_modifier{sound_driven_simulation=true},
+  init =
+  [[    
+    game.camera_position = {-650, 177}
+    game.camera_zoom = ]]..(zoom_modifier * 0.35)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 0
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {-650 + 30, 177 - 4}, -- position
+      {
+        "MojoD",
+        "2 Red Belt Base (3200 spm)",        
+        "Since March 2016"
+      },  -- text to display
+      5.2,  -- text scale
+      26 -- rectangle width
+    ) .. [[
+  ]],
+  update = [[
+  ]]
+}
+
 main_menu_simulations.twitch_plays_factorio = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/twitch_plays_factorio.zip",
@@ -96,8 +125,8 @@ main_menu_simulations.twitch_plays_factorio = {
     ]] .. hof.draw_label_code(
       {95.5, -185}, -- position
       {
-        "Twitch Plays Factorio",
         "FearThePenguin",
+        "Twitch Plays Factorio",        
         "14 February 2022"
       },  -- text to display
       2.5,  -- text scale
