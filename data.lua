@@ -79,6 +79,35 @@ end
 camera = require("scripts.camera")
 character_ai = require("scripts.character_ai")
 
+main_menu_simulations.doshdoshington_beltless = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/doshdoshington_beltless.zip",
+  length = playtime,
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[    
+    game.camera_position = {-85, 137}
+    game.camera_zoom = ]]..(zoom_modifier * 0.5)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 0
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {-85 - 6.5, 137 + 18}, -- position
+      {
+        "DoshDoshington",
+        "No Belts and No Bots",        
+        "11 May 2022"
+      },  -- text to display
+      3.5,  -- text scale
+      13 -- rectangle width
+    ) .. [[
+  ]],
+  update = [[
+  ]]
+}
+
 main_menu_simulations.mojod_3200k = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/mojod_3200k.zip",
