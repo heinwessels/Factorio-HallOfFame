@@ -1101,6 +1101,36 @@ main_menu_simulations.zisteau_meiosis = {
 }
 
 
+main_menu_simulations.Ellipticality_the_eye_of_the_desert = {
+  checkboard = false,
+  save = "__HallOfFame__/menu-simulations/Ellipticality_the_eye_of_the_desert.zip",
+  length = playtime,
+  volume_modifier = get_volume_modifier{},
+  init =
+  [[
+    game.camera_position = {-39.5, -51}
+    game.camera_zoom = ]]..(zoom_modifier * 0.55)..[[
+    game.tick_paused = false
+    game.surfaces.nauvis.daytime = 1
+
+    ]] .. alt_info .. [[
+
+    ]] .. hof.draw_label_code(
+      {-80, -54}, -- position
+      {
+        "Ellipticality",
+        "The Eye of the Desert ",
+        "8 January 2023"
+      },  -- text to display
+      3.8,  -- text scale
+      15 -- rectangle width
+    ) .. [[
+  ]],  
+  update =
+  [[
+  ]]
+}
+
 main_menu_simulations.Ellipticality_logistic_distribution = {
   checkboard = false,
   save = "__HallOfFame__/menu-simulations/Ellipticality_logistic_distribution.zip",
