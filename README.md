@@ -1,6 +1,6 @@
 # Hall of Fame - Menu Simulations
 
-[![shield](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2FHallOfFame)](https://mods.factorio.com/mod/HallOfFame)
+[![Support me on kofi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/stringweasel) [![shield](https://img.shields.io/badge/dynamic/json?color=orange&label=Factorio&query=downloads_count&suffix=%20downloads&url=https%3A%2F%2Fmods.factorio.com%2Fapi%2Fmods%2FHallOfFame)](https://mods.factorio.com/mod/HallOfFame)
 
 Factorio has a rich history of amazing creations, from highly optimized builds to beautiful and chaotic spaghetti. With the addition of the Menu Simulations in Factorio 1.1 it is time that we start a **Hall of Fame** to showcase these amazing creations. This is to commemorate the skilled and dedicated community and hopefully inspire even greater builds!
 
